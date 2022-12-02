@@ -1,12 +1,14 @@
 export class Task {
-  tasksId;
+  taskId;
   taskName;
   flagComplite;
   taskText;
+  taskGrade;
   constructor(name, text) {
     this.taskName = name;
     this.taskText = text;
     this.flagComplete = false;
+    this.taskGrade = 0;
   }
   showTaks() {
     console.log(
