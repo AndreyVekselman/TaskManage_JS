@@ -15,9 +15,9 @@ export function showOnHTML(task) {
   status.className = "status";
   if (task.flagComplete) {
     status.innerHTML = "Done";
-    status.setAttribute("id", "green");
+    status.classList.add("green");
   } else {
-    status.setAttribute("id", "red");
+    status.classList.add("red");
     status.innerHTML = "Need perform";
   }
   mainDiv.appendChild(taskName);

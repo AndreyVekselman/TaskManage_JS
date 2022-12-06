@@ -61,10 +61,10 @@ footer {
 .status {
   background-color: aqua;
 }
-#red {
+.red {
   background: red;
 }
-#green {
+.green {
   background: green;
 }
 
