@@ -2,6 +2,7 @@ export class Task {
   taskId;
   taskName;
   flagComplite;
+  taskSubject;
   taskText;
   taskGrade;
   constructor(name, text) {
@@ -9,6 +10,8 @@ export class Task {
     this.taskText = text;
     this.flagComplete = false;
     this.taskGrade = 0;
+    this.taskSubject;
+    this.taskId;
   }
   showTask() {
     console.log(
