@@ -11,9 +11,12 @@ showOnHTML(Task2);
 //outputting tasks to an HTML page
 function showOnHTML(task) {
   let mainDiv = document.createElement("div");
+  mainDiv.className = "mainDiv";
   let taskName = document.createElement("div");
-  let taskText = document.createElement("div");
   taskName.innerHTML = task.taskName;
+  taskName.className = "Name";
+  let taskText = document.createElement("div");
+  taskText.className = "Text";
   taskText.innerHTML = task.taskText;
   mainDiv.appendChild(taskName);
   mainDiv.appendChild(taskText);
