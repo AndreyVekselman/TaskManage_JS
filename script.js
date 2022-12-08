@@ -22,10 +22,11 @@ Alim.addTask(Task3);
 ////
 LS.setItem("student", JSON.stringify(Alim));
 ///
-let Big = LS.getItem("student");
+let Big = new Student();
+Big = LS.getItem("student");
 Big = JSON.parse(Big);
-console.log(typeof Big);
-console.log(Big.studentTasks);
+// console.log(Big.studentTasks);
+console.log(Big);
 
 showOnHTML(Alim.studentTasks[0]);
 showOnHTML(Task2);
