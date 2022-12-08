@@ -4,6 +4,8 @@ import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
 let LS = localStorage;
 
+const refresh = document.getElementById("refresh");
+
 let Task1 = new Task("create a class", "create a 1-st class and use module");
 const Alim = new Student();
 
@@ -33,3 +35,11 @@ showOnHTML(Task2);
 showOnHTML(Task3);
 showOnHTML(Task1);
 showOnHTML(Big.studentTasks[1]);
+refresh.addEventListener("click", () => {
+  Big = LS.getItem("student");
+  Big = JSON.parse(Big);
+  Big.studentTasks.forEach((element) => {
+    showOnHTML(element);
+  });
+  console.log(Big.studentTasks);
+});
