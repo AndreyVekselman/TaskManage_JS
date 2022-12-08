@@ -2,6 +2,7 @@
 import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
+let LS = localStorage;
 
 let Task1 = new Task("create a class", "create a 1-st class and use module");
 const Alim = new Student();
@@ -19,9 +20,15 @@ Alim.addTask(Task1);
 Alim.addTask(Task2);
 Alim.addTask(Task3);
 ////
+LS.setItem("student", JSON.stringify(Alim));
+///
+let Big = LS.getItem("student");
+Big = JSON.parse(Big);
+console.log(typeof Big);
+console.log(Big.studentTasks);
 
 showOnHTML(Alim.studentTasks[0]);
 showOnHTML(Task2);
 showOnHTML(Task3);
 showOnHTML(Task1);
-showOnHTML(Task1);
+showOnHTML(Big.studentTasks[1]);
