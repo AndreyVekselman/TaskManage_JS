@@ -2,6 +2,7 @@
 import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
+import { removeItems } from "./module/removeItems.mjs";
 let LS = localStorage;
 
 const refresh = document.getElementById("refresh");
@@ -38,6 +39,7 @@ showOnHTML(Big.studentTasks[1]);
 refresh.addEventListener("click", () => {
   Big = LS.getItem("student");
   Big = JSON.parse(Big);
+  removeItems();
   Big.studentTasks.forEach((element) => {
     showOnHTML(element);
   });
