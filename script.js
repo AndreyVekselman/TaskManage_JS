@@ -3,9 +3,6 @@ import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
 
-// export const arr = ["alim", "pupkin", "xujkin"];
-// console.log(arr);
-
 let Task1 = new Task("create a class", "create a 1-st class and use module");
 const Alim = new Student();
 

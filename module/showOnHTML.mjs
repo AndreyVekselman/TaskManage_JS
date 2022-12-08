@@ -1,5 +1,4 @@
 //show the tasks to an HTML page
-// import { Alim } from "../script.js";
 
 export function showOnHTML(task) {
   const main = document.querySelector("main");

@@ -11,4 +11,3 @@ createTaskBtn.addEventListener("click", () => {
   myTask.taskText = taskText.value;
   console.log(myTask);
 });
-// console.log(createTaskBtn);
