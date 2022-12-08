@@ -1,5 +1,6 @@
 import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
+import { Student } from "./Student.mjs";
 
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
@@ -9,6 +10,5 @@ createTaskBtn.addEventListener("click", () => {
   myTask.taskName = taskSubject.value;
   myTask.taskText = taskText.value;
   console.log(myTask);
-  showOnHTML(myTask);
 });
 // console.log(createTaskBtn);
