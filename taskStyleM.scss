@@ -80,6 +80,7 @@ $FontFamily: "Courier New", Courier, monospace;
       border-style: none;
       box-sizing: border-box;
     }
+
     .Btn_OK {
       @include Btn(gray);
     }
