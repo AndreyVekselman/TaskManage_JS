@@ -14,9 +14,6 @@ createTaskBtn.addEventListener("click", () => {
   const myTask = new Task();
   myTask.taskName = taskSubject.value;
   myTask.taskText = taskText.value;
-  // NewTask.addTask(myTask);
   NewTask.studentTasks.push(myTask);
   LS.setItem("student", JSON.stringify(NewTask));
-
-  console.log(myTask);
 });
