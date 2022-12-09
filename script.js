@@ -4,6 +4,8 @@ import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
 import { removeItems } from "./module/removeItems.mjs";
 let LS = localStorage;
+
+//add task on screen when it was added
 window.addEventListener("storage", function (e) {
   removeItems();
   let Big = JSON.parse(LS.getItem("student"));
@@ -13,7 +15,6 @@ window.addEventListener("storage", function (e) {
   });
 });
 
-const refresh = document.getElementById("refresh");
 let Task1 = new Task("create a class", "create a 1-st class and use module");
 const Alim = new Student();
 const Task2 = new Task("create a function showOnHTML", "show tasks it on HTML");
@@ -32,14 +33,11 @@ Big = JSON.parse(LS.getItem("student"));
 Big.studentTasks.forEach((element) => {
   showOnHTML(element);
 });
-// showOnHTML(Alim.studentTasks[0]);
-// showOnHTML(Task2);
-// showOnHTML(Task3);
-// showOnHTML(Task1);
-// showOnHTML(Big.studentTasks[1]);
+
+//refresh tasks pages
+const refresh = document.getElementById("refresh");
 refresh.addEventListener("click", () => {
-  Big = LS.getItem("student");
-  Big = JSON.parse(Big);
+  let Big = JSON.parse(LS.getItem("student"));
   removeItems();
   Big.studentTasks.forEach((element) => {
     showOnHTML(element);

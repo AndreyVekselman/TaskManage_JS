@@ -4,9 +4,7 @@ import { Student } from "./Student.mjs";
 
 let LS = localStorage;
 let NewTask = new Student();
-NewTask = LS.getItem("student");
-NewTask = JSON.parse(NewTask);
-console.log(NewTask);
+NewTask = JSON.parse(LS.getItem("student"));
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
   const taskSubject = document.getElementById("taskSubject");
