@@ -75,6 +75,10 @@ footer {
   line-height: 25px;
   margin-top: 120px;
 }
+#linkToCreatePage {
+  width: 150px;
+  margin: auto;
+}
 a {
   color: aliceblue;
 }

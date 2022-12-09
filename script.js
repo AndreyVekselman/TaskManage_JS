@@ -26,21 +26,33 @@ Alim.addTask(Task1);
 Alim.addTask(Task2);
 Alim.addTask(Task3);
 ////
-LS.setItem("student", JSON.stringify(Alim));
-///
-let Big = new Student();
-Big = JSON.parse(LS.getItem("student"));
-Big.studentTasks.forEach((element) => {
-  showOnHTML(element);
-});
+// LS.setItem("student", JSON.stringify(Alim));
+///first look at HTML page when it open
+// let Big = new Student();
+// Big = JSON.parse(LS.getItem("student"));
+// Big.studentTasks.forEach((element) => {
+//   showOnHTML(element);
+// });
 
 //refresh tasks pages
 const refresh = document.getElementById("refresh");
 refresh.addEventListener("click", () => {
-  let Big = JSON.parse(LS.getItem("student"));
   removeItems();
-  Big.studentTasks.forEach((element) => {
-    showOnHTML(element);
-  });
-  console.log(Big.studentTasks);
+  let Big = JSON.parse(LS.getItem("student"));
+  if (Big) {
+    Big.studentTasks.forEach((element) => {
+      showOnHTML(element);
+    });
+  } else {
+    console.log("No Task");
+    const main = document.querySelector("main");
+    const mainDiv = document.createElement("div");
+    mainDiv.className = "mainDiv";
+    const taskName = document.createElement("div");
+    taskName.innerHTML = "No Tasks to perform";
+    mainDiv.appendChild(taskName);
+    // mainDiv.appendChild(taskText);
+    // mainDiv.appendChild(status);
+    main.appendChild(mainDiv);
+  }
 });
