@@ -17,7 +17,9 @@ export function showOnHTML(task) {
 
   const deadLineTime = document.createElement("div");
   deadLineTime.setAttribute("class", "deadLineTime");
-  textNode = document.createTextNode(task.taskDeadlineTime);
+  textNode = document.createTextNode(
+    "Deadline for submission: " + task.taskDeadlineTime
+  );
   deadLineTime.appendChild(textNode);
 
   const status = document.createElement("div");
