@@ -1,7 +1,7 @@
 export class Task {
   taskId;
-  taskName;
-  flagComplite;
+  // taskName;
+  flagComplete;
   taskSubject;
   taskText;
   taskGrade;
