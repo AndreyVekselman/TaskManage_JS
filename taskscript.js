@@ -1,11 +1,13 @@
 import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
+import { loadFromLocalStorage } from "./module/loadFromLocalStorage.mjs";
+import { saveToLocalStorage } from "./module/saveToLocalStorage.mjs";
 
-let LS = localStorage;
+// let LS = localStorage;
 let NewTask = new Student();
-if (JSON.parse(LS.getItem("student"))) {
-  NewTask = JSON.parse(LS.getItem("student"));
+if (loadFromLocalStorage()) {
+  NewTask = loadFromLocalStorage();
 }
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
@@ -21,7 +23,8 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskId = NewTask.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
         NewTask.studentTasks.push(myTask);
-        LS.setItem("student", JSON.stringify(NewTask));
+        // LS.setItem("student", JSON.stringify(NewTask));
+        saveToLocalStorage(NewTask);
         // check point
         myTask.showTask();
       } else {
