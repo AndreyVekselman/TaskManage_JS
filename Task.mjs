@@ -5,6 +5,7 @@ export class Task {
   taskSubject;
   taskText;
   taskGrade;
+  taskDeadlineTime;
   constructor(name, text) {
     this.taskName = name;
     this.taskText = text;
@@ -12,6 +13,7 @@ export class Task {
     this.taskGrade = 0;
     this.taskSubject;
     this.taskId;
+    this.taskDeadlineTime;
   }
   showTask() {
     console.log(
