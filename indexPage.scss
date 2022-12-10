@@ -44,6 +44,7 @@ main {
     height: 200px;
     margin: auto;
     .Subject {
+      height: 50px;
       font-size: ($FontSize)-5;
       font-family: $FontFamily;
       font-style: normal;
@@ -58,10 +59,10 @@ main {
     }
     .status {
       width: 100px;
+      padding-left: 10px;
       height: fit-content;
-      //   line-height: 25px;
-      margin-bottom: 20px;
-      //   bott-top: 120px;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
   }
 }

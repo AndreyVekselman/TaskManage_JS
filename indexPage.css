@@ -44,6 +44,7 @@ main .mainDiv {
   margin: auto;
 }
 main .mainDiv .Subject {
+  height: 50px;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
@@ -60,10 +61,12 @@ main .mainDiv .deadLineTime {
 }
 main .mainDiv .status {
   width: 100px;
+  padding-left: 10px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 footer {
