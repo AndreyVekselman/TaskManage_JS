@@ -1,6 +1,6 @@
 // @import "reset";
 
-// $FontFamily: Arial, Helvetica, sans-serif;
+$FontFamily: Arial, Helvetica, sans-serif;
 body {
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ $FontFamily: "Courier New", Courier, monospace;
 }
 .main {
   width: 600px;
-  height: 450px;
+  // height: 450px;
   color: $TextColor;
   margin: auto;
   margin-top: 10px;
