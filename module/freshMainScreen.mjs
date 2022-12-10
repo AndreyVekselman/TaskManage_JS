@@ -12,9 +12,14 @@ export function freshMainScreen() {
     const main = document.querySelector("main");
     const mainDiv = document.createElement("div");
     mainDiv.className = "mainDiv";
-    const taskName = document.createElement("div");
-    taskName.innerHTML = "No Tasks to perform";
-    mainDiv.appendChild(taskName);
+
+    const taskSubject = document.createElement("div");
+    taskSubject.setAttribute("class", "Subject");
+
+    let textNode = document.createTextNode("No Tasks to perform");
+    taskSubject.appendChild(textNode);
+
+    mainDiv.appendChild(taskSubject);
     main.appendChild(mainDiv);
   }
 }

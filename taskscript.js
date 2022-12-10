@@ -4,7 +4,6 @@ import { Student } from "./Student.mjs";
 import { loadFromLocalStorage } from "./module/loadFromLocalStorage.mjs";
 import { saveToLocalStorage } from "./module/saveToLocalStorage.mjs";
 
-// let LS = localStorage;
 let NewTask = new Student();
 if (loadFromLocalStorage()) {
   NewTask = loadFromLocalStorage();
@@ -23,7 +22,6 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskId = NewTask.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
         NewTask.studentTasks.push(myTask);
-        // LS.setItem("student", JSON.stringify(NewTask));
         saveToLocalStorage(NewTask);
         // check point
         myTask.showTask();
