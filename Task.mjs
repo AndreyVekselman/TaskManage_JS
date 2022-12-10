@@ -6,9 +6,8 @@ export class Task {
   taskText;
   taskGrade;
   taskDeadlineTime;
-  constructor(name, text) {
-    this.taskName = name;
-    this.taskText = text;
+  constructor() {
+    this.taskText;
     this.flagComplete = false;
     this.taskGrade = 0;
     this.taskSubject;
@@ -17,7 +16,7 @@ export class Task {
   }
   showTask() {
     console.log(
-      `Perform task: ${this.taskName} do ${this.taskText}. show if task complete: ${this.flagComplete} task ID is ${this.taskId} Deadline for submission ${this.taskDeadlineTime}`
+      `Perform task: ${this.taskSubject} do ${this.taskText}. show if task complete: ${this.flagComplete} task ID is ${this.taskId} Deadline for submission ${this.taskDeadlineTime}`
     );
   }
 }

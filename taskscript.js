@@ -16,7 +16,7 @@ createTaskBtn.addEventListener("click", () => {
       const taskDeadLineTime = document.getElementById("taskDate");
       if (taskDeadLineTime.value) {
         const myTask = new Task();
-        myTask.taskName = taskSubject.value;
+        myTask.taskSubject = taskSubject.value;
         myTask.taskText = taskText.value;
         myTask.taskId = NewTask.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
