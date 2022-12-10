@@ -16,6 +16,7 @@ createTaskBtn.addEventListener("click", () => {
       const myTask = new Task();
       myTask.taskName = taskSubject.value;
       myTask.taskText = taskText.value;
+      myTask.taskId = NewTask.studentTasks.length;
       NewTask.studentTasks.push(myTask);
       LS.setItem("student", JSON.stringify(NewTask));
       // check point
