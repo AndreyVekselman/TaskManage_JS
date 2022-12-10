@@ -18,6 +18,8 @@ createTaskBtn.addEventListener("click", () => {
       myTask.taskText = taskText.value;
       NewTask.studentTasks.push(myTask);
       LS.setItem("student", JSON.stringify(NewTask));
+      // check point
+      myTask.showTask();
     } else {
       alert("enter text, at least 10 characters");
     }

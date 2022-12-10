@@ -15,7 +15,7 @@ export class Task {
   }
   showTask() {
     console.log(
-      `Perform task: ${this.taskName} do ${this.taskText}. show if task complete: ${this.flagComplete}`
+      `Perform task: ${this.taskName} do ${this.taskText}. show if task complete: ${this.flagComplete} task ID is ${this.taskId}`
     );
   }
 }

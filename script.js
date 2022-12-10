@@ -3,16 +3,12 @@ import { Task } from "./Task.mjs";
 import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
 import { removeItems } from "./module/removeItems.mjs";
+import { freshMainScreen } from "./module/freshMainScreen.mjs";
 let LS = localStorage;
 
-//add task on screen when it was added
+//add or remove tasks on screen when it was added
 window.addEventListener("storage", function (e) {
-  removeItems();
-  let Big = JSON.parse(LS.getItem("student"));
-  Big.studentTasks.forEach((element) => {
-    console.log(Big);
-    showOnHTML(element);
-  });
+  freshMainScreen();
 });
 
 let Task1 = new Task("create a class", "create a 1-st class and use module");
@@ -35,24 +31,7 @@ Alim.addTask(Task3);
 // });
 
 //refresh tasks pages
-const refresh = document.getElementById("refresh");
-refresh.addEventListener("click", () => {
-  removeItems();
-  let Big = JSON.parse(LS.getItem("student"));
-  if (Big) {
-    Big.studentTasks.forEach((element) => {
-      showOnHTML(element);
-    });
-  } else {
-    console.log("No Task");
-    const main = document.querySelector("main");
-    const mainDiv = document.createElement("div");
-    mainDiv.className = "mainDiv";
-    const taskName = document.createElement("div");
-    taskName.innerHTML = "No Tasks to perform";
-    mainDiv.appendChild(taskName);
-    // mainDiv.appendChild(taskText);
-    // mainDiv.appendChild(status);
-    main.appendChild(mainDiv);
-  }
-});
+// const refresh = document.getElementById("refresh");
+// refresh.addEventListener("click", freshMainScreen());
+
+freshMainScreen();
