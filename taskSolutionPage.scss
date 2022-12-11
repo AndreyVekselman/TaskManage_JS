@@ -61,6 +61,10 @@ main {
       font-weight: bold;
       margin-bottom: 30px;
     }
+    label {
+      font-size: $FontSize;
+    }
+
     #taskSolution {
       resize: none;
       padding-left: 20px;
