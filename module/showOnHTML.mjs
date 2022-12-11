@@ -34,9 +34,32 @@ export function showOnHTML(task) {
     status.appendChild(textNode);
   }
 
+  const solution = document.createElement("div");
+  const butnSolution = document.createElement("button");
+  butnSolution.setAttribute("class", "butnSolution");
+  butnSolution.setAttribute("id", "butnSolution");
+  const btntxt = document.createTextNode("To Solution");
+  const link = document.createElement("a");
+  link.setAttribute("href", "/html/taskSolutionPage.html");
+  link.setAttribute("target", "_blank");
+
+  // <a href="default.asp" target="_blank">
+  //   This is a link
+  // </a>;
+
+  butnSolution.appendChild(btntxt);
+  butnSolution.appendChild(link);
+  solution.appendChild(status);
+  solution.appendChild(butnSolution);
+
+  // <button type="reset" class="Btn_OK" id="Btn_OK">
+  //   Create a New Task
+  // </button>;
+
   mainDiv.appendChild(taskSubject);
   mainDiv.appendChild(deadLineTime);
   // mainDiv.appendChild(taskText);
-  mainDiv.appendChild(status);
+  // mainDiv.appendChild(status);
+  mainDiv.appendChild(solution);
   main.appendChild(mainDiv);
 }
