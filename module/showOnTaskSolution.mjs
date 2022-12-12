@@ -14,14 +14,10 @@ function showOnTaskSolution() {
       txtDiv.appendChild(txtNode);
       const marker = task.taskId;
     }
-
-    // console.log(task.flagSolution);
   });
-
-  //   if (Newtask.studentTask.taskSolution) {
-  //     const txtDiv = document.getElementById("text");
-  //     const txtNode = document.createTextNode(Newtask.taskText);
-  //     txtDiv.appendChild(txtNode);
-  //   }
+  // const btn=document.getElementById('btn');
+  // const submitSolutionBtn = document.getElementById("submitSolution");
+  // const link = document.createElement("a");
+  // link.setAttribute("href", "/index.html");
 }
 showOnTaskSolution();
