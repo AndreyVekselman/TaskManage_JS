@@ -38,10 +38,10 @@ main {
   flex: 1;
   .mainDiv {
     background: rgb(216, 208, 208);
-    width: 23%;
+    width: 33%;
     border: 2px solid black;
     padding: 10px;
-    height: 200px;
+    height: 250px;
     margin: auto;
     .Subject {
       height: 50px;
@@ -55,14 +55,31 @@ main {
     .deadLineTime {
       width: 150px;
       height: fit-content;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
-    .status {
-      width: 100px;
-      padding-left: 10px;
-      height: fit-content;
-      margin-bottom: 10px;
-      font-weight: 600;
+    .solution {
+      width: 100%;
+      float: left;
+      .status {
+        text-align: center;
+        width: 45%;
+        padding-left: 5px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        float: left;
+        border: 1px solid black;
+      }
+      #butnSolution {
+        // float: right;
+        height: 30px;
+        width: 50%;
+        margin-left: 5px;
+        font-family: $FontFamily;
+        font-size: ($FontSize)-10;
+        margin-bottom: 20px;
+      }
     }
   }
 }

@@ -35,11 +35,12 @@ export function showOnHTML(task) {
   }
 
   const solution = document.createElement("div");
+  solution.setAttribute("class", "solution");
   const butnSolution = document.createElement("button");
   butnSolution.setAttribute("class", "butnSolution");
   butnSolution.setAttribute("id", "butnSolution");
   const btntxt = document.createTextNode("To Solution");
-  const link = document.createElement("LINK");
+  const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   link.setAttribute("target", "_blank");
 
@@ -47,14 +48,9 @@ export function showOnHTML(task) {
   link.appendChild(butnSolution);
   solution.appendChild(link);
   solution.appendChild(status);
-  // <button type="reset" class="Btn_OK" id="Btn_OK">
-  //   Create a New Task
-  // </button>;
 
   mainDiv.appendChild(taskSubject);
   mainDiv.appendChild(deadLineTime);
-  // mainDiv.appendChild(taskText);
-  // mainDiv.appendChild(status);
   mainDiv.appendChild(solution);
   main.appendChild(mainDiv);
 }
