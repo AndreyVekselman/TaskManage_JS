@@ -4,9 +4,11 @@ import { Student } from "./Student.mjs";
 import { loadFromLocalStorage } from "./module/loadFromLocalStorage.mjs";
 import { saveToLocalStorage } from "./module/saveToLocalStorage.mjs";
 
-let NewTask = new Student();
+let Student1;
 if (loadFromLocalStorage()) {
-  NewTask = loadFromLocalStorage();
+  Student1 = loadFromLocalStorage();
+} else {
+  Student1 = new Student();
 }
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
@@ -19,10 +21,11 @@ createTaskBtn.addEventListener("click", () => {
         const myTask = new Task();
         myTask.taskSubject = taskSubject.value;
         myTask.taskText = taskText.value;
-        myTask.taskId = NewTask.studentTasks.length;
+        myTask.taskId = Student1.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
-        NewTask.studentTasks.push(myTask);
-        saveToLocalStorage(NewTask);
+        Student1.addTask(myTask);
+
+        saveToLocalStorage(Student1);
         // check point
         myTask.showTask();
       } else {
