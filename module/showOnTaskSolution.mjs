@@ -22,15 +22,13 @@ function showOnTaskSolution() {
     const submitSolutionBtn = document.getElementById("submitSolution");
     submitSolutionBtn.addEventListener("click", () => {
       const taskSolution = document.getElementById("taskSolution");
-      console.log(taskSolution.value);
-      console.log(taskSolution.value.length);
       if (taskSolution.value.length > 5) {
         localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
         localStudent.studentTasks[marker].flagComplete = true;
       } else {
         alert("enter solution text, at least 5 characters");
       }
-      console.log(localStudent.studentTasks[marker].taskSolution);
+      console.log(localStudent.studentTasks[marker].taskTextSolution);
       saveToLocalStorage(localStudent);
     });
   }
