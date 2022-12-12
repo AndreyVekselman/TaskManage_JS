@@ -1,3 +1,5 @@
+// import { showOnTaskSolution } from "/module/showOnTaskSolution.mjs";
+
 //show the tasks to an index HTML page
 
 export function showOnHTML(task) {
@@ -43,7 +45,12 @@ export function showOnHTML(task) {
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   link.setAttribute("target", "_blank");
-
+  //
+  butnSolution.addEventListener("click", () => {
+    task.taskSolution = true;
+    console.log(task.taskSolution);
+  });
+  //
   butnSolution.appendChild(btntxt);
   link.appendChild(butnSolution);
   solution.appendChild(link);

@@ -1,18 +1,21 @@
 export class Task {
   taskId;
-  // taskName;
   flagComplete;
+  flagSolution;
   taskSubject;
   taskText;
   taskGrade;
   taskDeadlineTime;
+  taskTextSolution;
   constructor() {
     this.taskText;
     this.flagComplete = false;
+    this.flagSolution = false;
     this.taskGrade = 0;
     this.taskSubject;
     this.taskId;
     this.taskDeadlineTime;
+    this.taskTextSolution = "";
   }
   showTask() {
     console.log(
