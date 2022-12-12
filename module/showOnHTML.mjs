@@ -2,7 +2,6 @@ import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
 import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 //show the tasks to an index HTML page
 export function showOnHTML(task) {
-  const localTask = loadFromLocalStorage();
   const main = document.querySelector("main");
   const mainDiv = document.createElement("div");
   mainDiv.setAttribute("class", "mainDiv");
@@ -47,9 +46,9 @@ export function showOnHTML(task) {
   link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
-    task.flagSolution = true;
-    saveToLocalStorage(localTask);
-    console.log(task.taskSolution);
+    const localStudet = loadFromLocalStorage();
+    localStudet.studentTasks[task.taskId].flagSolution = true;
+    saveToLocalStorage(localStudet);
   });
   //
   butnSolution.appendChild(btntxt);
