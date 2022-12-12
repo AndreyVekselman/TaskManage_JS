@@ -43,7 +43,7 @@ export function showOnHTML(task) {
   const btntxt = document.createTextNode("To Solution");
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
-  link.setAttribute("target", "_blank");
+  // link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
     const localStudet = loadFromLocalStorage();
