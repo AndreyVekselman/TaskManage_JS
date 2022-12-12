@@ -12,9 +12,10 @@ function showOnTaskSolution() {
       const txtDiv = document.getElementById("text");
       const txtNode = document.createTextNode(task.taskText);
       txtDiv.appendChild(txtNode);
+      const marker = task.taskId;
     }
 
-    console.log(task.flagSolution);
+    // console.log(task.flagSolution);
   });
 
   //   if (Newtask.studentTask.taskSolution) {
