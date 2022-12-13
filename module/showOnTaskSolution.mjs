@@ -30,13 +30,13 @@ function showOnTaskSolution() {
     if (taskSolution.value.length > 5) {
       localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
       localStudent.studentTasks[marker].flagComplete = true;
-      localStudent.saveToLocalStorage(localStudent.studentTasks[marker]);
+      // localStudent.saveToLocalStorage(localStudent.studentTasks[marker]);
     } else {
       alert("enter solution text, at least 5 characters");
     }
     console.log(localStudent.studentTasks[marker].taskTextSolution);
     // saveToLocalStorage(localStudent);
-    localStudent.saveToLocalStorage(task);
+    localStudent.replaceTask(localStudent.studentTasks[marker], marker);
   });
 }
 showOnTaskSolution();
