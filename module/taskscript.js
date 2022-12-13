@@ -20,7 +20,7 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskText = taskText.value;
         myTask.taskId = Student1.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
-        Student1.saveToLocalStorage(myTask);
+        Student1.addTask(myTask);
         myTask.showTask();
       } else {
         alert("enter correct Date for Dead line for submission");

@@ -6,10 +6,9 @@ import { Student } from "../Student.mjs";
 export function freshMainScreen() {
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  removeItems();
-  //
 
-  //
+  removeItems();
+
   if (localStudent.studentTasks.length) {
     localStudent.studentTasks.forEach((element) => {
       showOnHTML(element);
