@@ -49,26 +49,10 @@ export function showOnHTML(task) {
   link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
-    console.log(task.taskId);
     task.flagSolution = true;
-
     const localStudent = new Student();
     localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    console.log(localStudent);
-
     localStudent.replaceTask(task, task.taskId);
-    console.log(localStudent);
-
-    // localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    // const localTask = localStudent.studentTasks[task.taskId];
-    // localTask.flagSolution = true;
-    // // localStudent.studentTasks[task.taskId].flagSolution = true;
-    // localStudent.replaceTask(localTask, task.taskId);
-    // console.log(localStudent.studentTasks);
-    //
-    // const localStudet = loadFromLocalStorage();
-    // localStudet.studentTasks[task.taskId].flagSolution = true;
-    // saveToLocalStorage(localStudet);
   });
   //
   butnSolution.appendChild(btntxt);
