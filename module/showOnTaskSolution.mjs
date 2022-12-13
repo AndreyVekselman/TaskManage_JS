@@ -7,20 +7,21 @@ import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 import { Student } from "../Student.mjs";
 
 function showOnTaskSolution() {
-  // if (loadFromLocalStorage()) {
-  //   const localStudent = loadFromLocalStorage();
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  let marker;
   console.log(localStudent.studentTasks);
+  let marker;
+
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
       const txtDiv = document.getElementById("text");
       const txtNode = document.createTextNode(task.taskText);
       txtDiv.appendChild(txtNode);
+      const taskSolution = document.getElementById("taskSolution");
+      taskSolution.value = task.taskTextSolution;
+
       marker = task.taskId;
       task.flagSolution = false;
-      console.log(marker);
     }
     localStudent.replaceTask(task, task.taskId);
   });
@@ -38,7 +39,7 @@ function showOnTaskSolution() {
       alert("enter solution text, at least 5 characters");
     }
     console.log(localStudent.studentTasks[marker].taskTextSolution);
-    // saveToLocalStorage(localStudent);
+    console.log(localStudent);
   });
 }
 showOnTaskSolution();
