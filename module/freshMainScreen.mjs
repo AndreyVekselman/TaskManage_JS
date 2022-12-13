@@ -1,11 +1,17 @@
 import { removeItems } from "./removeItems.mjs";
 import { showOnHTML } from "./showOnHTML.mjs";
-import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
+// import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
+import { Student } from "../Student.mjs";
 
 export function freshMainScreen() {
+  let localStudent = new Student();
+  localStudent.studentTasks = localStudent.loadFromLocalStorage();
   removeItems();
-  if (loadFromLocalStorage()) {
-    loadFromLocalStorage().studentTasks.forEach((element) => {
+  //
+
+  //
+  if (localStudent.studentTasks.length) {
+    localStudent.studentTasks.forEach((element) => {
       showOnHTML(element);
     });
   } else {

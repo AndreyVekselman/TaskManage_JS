@@ -9,13 +9,14 @@ export class Student {
     // this.studentID;
     // this.studentGrade;
     this.studentTasks = [];
-    this.saveToLocalStorage();
+    // this.saveToLocalStorage();
+    // this.loadFromLocalStorage();
   }
   addTask(task) {
     this.studentTasks.push(task);
   }
   loadFromLocalStorage() {
-    this.studentTasks = JSON.parse(localStorage("studentTasks"));
+    this.studentTasks = JSON.parse(localStorage.getItem("studentTasks")) || [];
     return this.studentTasks;
   }
   saveToLocalStorage(task) {

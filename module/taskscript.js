@@ -1,15 +1,20 @@
 import { Task } from "../Task.mjs";
 import { showOnHTML } from "./showOnHTML.mjs";
 import { Student } from "../Student.mjs";
-import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
-import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
+// import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
+// import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
-let Student1;
-if (loadFromLocalStorage()) {
-  Student1 = loadFromLocalStorage();
-} else {
-  Student1 = new Student();
-}
+// let Student1;
+////
+let Student1 = new Student();
+Student1.studentTasks = Student1.loadFromLocalStorage();
+
+////
+// if (loadFromLocalStorage()) {
+//   Student1 = loadFromLocalStorage();
+// } else {
+//   Student1 = new Student();
+// }
 // console.log(Student1);
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
@@ -24,11 +29,7 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskText = taskText.value;
         myTask.taskId = Student1.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
-        Student1.studentTasks.push(myTask);
-        // Student1.addTask(myTask);
-
-        saveToLocalStorage(Student1);
-        // check point
+        Student1.saveToLocalStorage(myTask);
         myTask.showTask();
       } else {
         alert("enter correct Date for Dead line for submission");
