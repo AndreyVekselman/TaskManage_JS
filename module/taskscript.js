@@ -1,8 +1,8 @@
-import { Task } from "./Task.mjs";
-import { showOnHTML } from "./module/showOnHTML.mjs";
-import { Student } from "./Student.mjs";
-import { loadFromLocalStorage } from "./module/loadFromLocalStorage.mjs";
-import { saveToLocalStorage } from "./module/saveToLocalStorage.mjs";
+import { Task } from "../Task.mjs";
+import { showOnHTML } from "./showOnHTML.mjs";
+import { Student } from "../Student.mjs";
+import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
+import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
 let Student1;
 if (loadFromLocalStorage()) {
