@@ -4,24 +4,15 @@ import { Student } from "../Student.mjs";
 // import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
 // import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
-// let Student1;
-////
 let Student1 = new Student();
 Student1.studentTasks = Student1.loadFromLocalStorage();
 
-////
-// if (loadFromLocalStorage()) {
-//   Student1 = loadFromLocalStorage();
-// } else {
-//   Student1 = new Student();
-// }
-// console.log(Student1);
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
   const taskSubject = document.getElementById("taskSubject");
   if (taskSubject.value.length > 5) {
     const taskText = document.getElementById("taskText");
-    if (taskText.value.length > 10) {
+    if (taskText.value.length > 5) {
       const taskDeadLineTime = document.getElementById("taskDate");
       if (taskDeadLineTime.value) {
         const myTask = new Task();
@@ -35,7 +26,7 @@ createTaskBtn.addEventListener("click", () => {
         alert("enter correct Date for Dead line for submission");
       }
     } else {
-      alert("enter text, at least 10 characters");
+      alert("enter text, at least 5 characters");
     }
   } else {
     alert("enter Subject, at least 5 characters");
