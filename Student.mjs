@@ -4,8 +4,8 @@ export class Student {
   studentTasks;
   studentGrade;
   constructor() {
-    this.studentName;
-    this.studentID;
+    // this.studentName;
+    // this.studentID;
     this.studentGrade;
     this.studentTasks = [];
   }
