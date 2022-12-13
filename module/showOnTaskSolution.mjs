@@ -11,7 +11,6 @@ function showOnTaskSolution() {
   //   const localStudent = loadFromLocalStorage();
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-
   let marker;
   console.log(localStudent.studentTasks);
   localStudent.studentTasks.forEach((task) => {
@@ -21,7 +20,9 @@ function showOnTaskSolution() {
       txtDiv.appendChild(txtNode);
       marker = task.taskId;
       task.flagSolution = false;
+      console.log(marker);
     }
+    localStudent.replaceTask(task, task.taskId);
   });
   const submitSolutionBtn = document.getElementById("submitSolution");
   submitSolutionBtn.addEventListener("click", () => {
