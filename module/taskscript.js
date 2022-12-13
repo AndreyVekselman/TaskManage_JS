@@ -1,8 +1,8 @@
-import { Task } from "./Task.mjs";
-import { showOnHTML } from "./module/showOnHTML.mjs";
-import { Student } from "./Student.mjs";
-import { loadFromLocalStorage } from "./module/loadFromLocalStorage.mjs";
-import { saveToLocalStorage } from "./module/saveToLocalStorage.mjs";
+import { Task } from "../Task.mjs";
+import { showOnHTML } from "./showOnHTML.mjs";
+import { Student } from "../Student.mjs";
+import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
+import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
 let Student1;
 if (loadFromLocalStorage()) {
@@ -10,6 +10,7 @@ if (loadFromLocalStorage()) {
 } else {
   Student1 = new Student();
 }
+// console.log(Student1);
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
   const taskSubject = document.getElementById("taskSubject");
@@ -23,7 +24,8 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskText = taskText.value;
         myTask.taskId = Student1.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
-        Student1.addTask(myTask);
+        Student1.studentTasks.push(myTask);
+        // Student1.addTask(myTask);
 
         saveToLocalStorage(Student1);
         // check point
