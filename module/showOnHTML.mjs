@@ -46,7 +46,7 @@ export function showOnHTML(task) {
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   //
-  link.setAttribute("target", "_blank");
+  // link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;

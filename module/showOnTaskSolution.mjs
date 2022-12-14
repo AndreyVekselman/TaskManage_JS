@@ -9,7 +9,6 @@ import { Student } from "../Student.mjs";
 function showOnTaskSolution() {
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  console.log(localStudent.studentTasks);
   let marker;
 
   localStudent.studentTasks.forEach((task) => {
@@ -19,12 +18,12 @@ function showOnTaskSolution() {
       txtDiv.appendChild(txtNode);
       const taskSolution = document.getElementById("taskSolution");
       taskSolution.value = task.taskTextSolution;
-
       marker = task.taskId;
       task.flagSolution = false;
     }
     localStudent.replaceTask(task, task.taskId);
   });
+  const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
   submitSolutionBtn.addEventListener("click", () => {
     const taskSolution = document.getElementById("taskSolution");
@@ -33,6 +32,7 @@ function showOnTaskSolution() {
       localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
       localStudent.studentTasks[marker].flagComplete = true;
       localStudent.replaceTask(localStudent.studentTasks[marker], marker);
+      linkToIndex.setAttribute("href", "/index.html");
 
       // localStudent.saveToLocalStorage(localStudent.studentTasks[marker]);
     } else {
