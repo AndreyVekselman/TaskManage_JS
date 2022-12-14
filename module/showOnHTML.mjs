@@ -1,6 +1,3 @@
-import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
-import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
-//
 import { Student } from "../Student.mjs";
 //show the tasks to an index HTML page
 export function showOnHTML(task) {

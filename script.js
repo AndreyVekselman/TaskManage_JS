@@ -4,7 +4,6 @@ import { showOnHTML } from "./module/showOnHTML.mjs";
 import { Student } from "./Student.mjs";
 import { removeItems } from "./module/removeItems.mjs";
 import { freshMainScreen } from "./module/freshMainScreen.mjs";
-let LS = localStorage;
 
 //add or remove tasks on screen when it was added
 window.addEventListener("storage", function (e) {
