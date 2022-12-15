@@ -92,9 +92,33 @@ main {
       font-size: $FontSize;
       margin: 10px 0;
       width: 100%;
-      height: 100px;
+      height: 130px;
       border-style: none;
       box-sizing: border-box;
+    }
+  }
+  .grade {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: auto;
+    width: 100%;
+    line-height: 50px;
+
+    input {
+      width: 60px;
+      height: 25px;
+      font-size: ($FontSize)-5;
+    }
+    .btn {
+      align-items: center;
+      text-align: center;
+    }
+    #submitScore {
+      height: 40px;
+      margin-left: 150px;
+      font-size: ($FontSize)-5;
+      background-color: green;
     }
   }
 }

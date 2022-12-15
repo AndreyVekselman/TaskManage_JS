@@ -92,9 +92,32 @@ main .capsule2 #deleteTaskSolution {
   font-size: 25px;
   margin: 10px 0;
   width: 100%;
-  height: 100px;
+  height: 130px;
   border-style: none;
   box-sizing: border-box;
+}
+main .grade {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: auto;
+  width: 100%;
+  line-height: 50px;
+}
+main .grade input {
+  width: 60px;
+  height: 25px;
+  font-size: 20px;
+}
+main .grade .btn {
+  align-items: center;
+  text-align: center;
+}
+main .grade #submitScore {
+  height: 40px;
+  margin-left: 150px;
+  font-size: 20px;
+  background-color: green;
 }
 
 footer {
