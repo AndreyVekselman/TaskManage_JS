@@ -14,8 +14,13 @@ function showOnTaskSolution() {
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
       const txtDiv = document.getElementById("text");
-      const txtNode = document.createTextNode(task.taskText);
-      txtDiv.appendChild(txtNode);
+      const txtArea = document.createElement("textarea");
+
+      // const txtNode = document.createTextNode(task.taskText);
+      txtArea.value = task.taskText;
+      // txtArea.appendChild(txtNode);
+      txtDiv.appendChild(txtArea);
+
       const taskSolution = document.getElementById("taskSolution");
       taskSolution.value = task.taskTextSolution;
       marker = task.taskId;
