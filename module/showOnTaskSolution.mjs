@@ -13,21 +13,7 @@ function showOnTaskSolution() {
 
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
-      let text = "";
-      const subjText = document.getElementById("subjTxt");
-      text = "Task  Subject: " + task.taskSubject;
-      const txtNode = document.createTextNode(text);
-      subjText.appendChild(txtNode);
-      const txtDiv = document.getElementById("text");
-      const txtArea = document.createElement("textarea");
-      txtArea.setAttribute("id", "txtArea");
-      txtArea.disabled = true;
-      txtArea.value = task.taskText;
-      txtDiv.appendChild(txtArea);
-
-      const taskSolution = document.getElementById("taskSolution");
-      taskSolution.value = task.taskTextSolution;
-      marker = task.taskId;
+      marker = showTaskDetails(task);
       task.flagSolution = false;
     }
     localStudent.replaceTask(task, task.taskId);
@@ -42,15 +28,27 @@ function showOnTaskSolution() {
       localStudent.studentTasks[marker].flagComplete = true;
       localStudent.replaceTask(localStudent.studentTasks[marker], marker);
       linkToIndex.setAttribute("href", "/index.html");
-
-      // localStudent.saveToLocalStorage(localStudent.studentTasks[marker]);
     } else {
       alert("enter solution text, at least 5 characters");
     }
-    console.log(localStudent.studentTasks[marker].taskTextSolution);
-    console.log(localStudent);
   });
 }
 showOnTaskSolution();
 
-function showTaskDetails(task) {}
+function showTaskDetails(task) {
+  let text = "";
+  const subjText = document.getElementById("subjTxt");
+  text = "Task  Subject: " + task.taskSubject;
+  const txtNode = document.createTextNode(text);
+  subjText.appendChild(txtNode);
+  const txtDiv = document.getElementById("text");
+  const txtArea = document.createElement("textarea");
+  txtArea.setAttribute("id", "txtArea");
+  txtArea.disabled = true;
+  txtArea.value = task.taskText;
+  txtDiv.appendChild(txtArea);
+
+  const taskSolution = document.getElementById("taskSolution");
+  taskSolution.value = task.taskTextSolution;
+  return task.taskId;
+}
