@@ -52,3 +52,5 @@ function showOnTaskSolution() {
   });
 }
 showOnTaskSolution();
+
+function showTaskDetails(task) {}

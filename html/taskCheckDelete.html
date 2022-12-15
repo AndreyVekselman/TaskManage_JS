@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teacher Tasks Solution</title>
-    <link rel="stylesheet" href="/css/taskSolutionPage.css" />
+    <link rel="stylesheet" href="/css/taskCheckDelPage.css" />
     <script defer type="module" src="/module/showOnTaskSolution.mjs"></script>
   </head>
   <body>
     <header class="Header" id="refresh">
       <div><h2>Teacher Tasks Solution</h2></div>
-      <!-- <div id="linkToCreatePage">
-        <a href="createTask.html" target="_blank"> <p>Add Tasks</p></a>
-      </div> -->
     </header>
     <main>
       <div class="capsule1">
-        <div class="title">Task details:</div>
+        <div class="title">
+          <p id="subjTxt" class="p"></p>
+          <p id="details">Task details:</p>
+        </div>
         <div class="text" id="text"></div>
       </div>
       <div class="capsule2">
@@ -33,10 +33,10 @@
         ></textarea>
         <!-- </div> -->
         <!-- <div class="textarea2"> -->
-        <label for="taskSolution2">Enter notes:</label><br />
+        <label for="deleteTaskSolution">Enter notes:</label><br />
         <textarea
-          name="solution2"
-          id="taskSolution2"
+          name="deleteTaskSolution"
+          id="deleteTaskSolution"
           placeholder="Text solution"
         ></textarea>
         <!-- </div> -->
