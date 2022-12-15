@@ -120,6 +120,22 @@ main .grade #submitScore {
   background-color: green;
 }
 
+#delButton {
+  background-color: rgb(236, 149, 149);
+  width: 80%;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  padding: 20px;
+  color: aliceblue;
+}
+#delButton .deleteButton {
+  background-color: red;
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
+  height: 150px;
+}
+
 footer {
   background-color: black;
   color: aliceblue;
