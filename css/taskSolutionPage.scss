@@ -35,12 +35,15 @@ main {
     margin: auto;
     .title {
       height: 50px;
-      font-size: ($FontSize)-5;
+      font-size: ($FontSize)-3;
       font-family: $FontFamily;
       font-style: normal;
-      background-color: aqua;
       font-weight: bold;
       margin-bottom: 30px;
+      // text-align: center;
+      p {
+        text-align: center;
+      }
     }
     #txtArea {
       resize: none;
@@ -61,28 +64,27 @@ main {
     padding: 10px;
     height: 500px;
     margin: auto;
-    .title,
-    .text {
+    .title {
       height: 50px;
-      font-size: ($FontSize)-5;
+      font-size: ($FontSize)-3;
       font-family: $FontFamily;
       font-style: normal;
-      background-color: aqua;
       font-weight: bold;
       margin-bottom: 30px;
+      p {
+        text-align: center;
+      }
     }
-
     label {
       font-size: $FontSize;
     }
-
     #taskSolution {
       resize: none;
       padding-left: 20px;
       font-size: $FontSize;
       margin: 10px 0;
       width: 100%;
-      height: 150px;
+      height: 300px;
 
       border-style: none;
       box-sizing: border-box;
@@ -93,7 +95,7 @@ main {
       font-size: $FontSize;
       margin: 10px 0;
       width: 100%;
-      height: 150px;
+      height: 300px;
 
       border-style: none;
       box-sizing: border-box;
