@@ -10,9 +10,9 @@ Student1.studentTasks = Student1.loadFromLocalStorage();
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
   const taskSubject = document.getElementById("taskSubject");
-  if (taskSubject.value.length > 5) {
+  if (taskSubject.value.length > 4) {
     const taskText = document.getElementById("taskText");
-    if (taskText.value.length > 5) {
+    if (taskText.value.length > 4) {
       const taskDeadLineTime = document.getElementById("taskDate");
       if (taskDeadLineTime.value) {
         const myTask = new Task();
