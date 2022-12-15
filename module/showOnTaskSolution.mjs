@@ -28,7 +28,7 @@ function showOnTaskSolution() {
   submitSolutionBtn.addEventListener("click", () => {
     const taskSolution = document.getElementById("taskSolution");
     localStudent.studentTasks[marker].taskTextSolution = "";
-    if (taskSolution.value.length > 5) {
+    if (taskSolution.value.length > 4) {
       localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
       localStudent.studentTasks[marker].flagComplete = true;
       localStudent.replaceTask(localStudent.studentTasks[marker], marker);
