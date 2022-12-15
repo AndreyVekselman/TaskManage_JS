@@ -13,14 +13,16 @@ function showOnTaskSolution() {
 
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
+      let text = "";
+      const subjText = document.getElementById("subjTxt");
+      text = "Task  Subject: " + task.taskSubject;
+      const txtNode = document.createTextNode(text);
+      subjText.appendChild(txtNode);
       const txtDiv = document.getElementById("text");
       const txtArea = document.createElement("textarea");
       txtArea.setAttribute("id", "txtArea");
       txtArea.disabled = true;
-
-      // const txtNode = document.createTextNode(task.taskText);
       txtArea.value = task.taskText;
-      // txtArea.appendChild(txtNode);
       txtDiv.appendChild(txtArea);
 
       const taskSolution = document.getElementById("taskSolution");
