@@ -15,6 +15,8 @@ function showOnTaskSolution() {
     if (task.flagSolution) {
       const txtDiv = document.getElementById("text");
       const txtArea = document.createElement("textarea");
+      txtArea.setAttribute("id", "txtArea");
+      txtArea.disabled;
 
       // const txtNode = document.createTextNode(task.taskText);
       txtArea.value = task.taskText;
