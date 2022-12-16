@@ -33,7 +33,7 @@ export function showOnHTML(task) {
     textNode = document.createTextNode("Need perform");
     status.appendChild(textNode);
   }
-
+  // create button-link to task solution page
   const solution = document.createElement("div");
   solution.setAttribute("class", "solution");
   const butnSolution = document.createElement("button");
@@ -43,7 +43,6 @@ export function showOnHTML(task) {
   const link = document.createElement("a");
   // link.setAttribute("href", "/html/taskSolutionPage.html");
   link.setAttribute("href", "/html/taskCheckDelete.html");
-
   //
   // link.setAttribute("target", "_blank");
   //
@@ -53,7 +52,7 @@ export function showOnHTML(task) {
     localStudent.studentTasks = localStudent.loadFromLocalStorage();
     localStudent.replaceTask(task, task.taskId);
   });
-  //
+
   butnSolution.appendChild(btntxt);
   link.appendChild(butnSolution);
   solution.appendChild(link);
