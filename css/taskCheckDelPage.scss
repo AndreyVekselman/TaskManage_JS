@@ -21,143 +21,130 @@ Header {
   line-height: 100px;
 }
 main {
-  display: flex;
-  flex-wrap: wrap;
   background-color: rgb(20, 20, 20);
-  font-family: $FontFamily;
-  flex: 1;
-  .capsule1 {
-    background: rgb(216, 208, 208);
-    width: 45%;
-    border: 4px solid rgb(18, 220, 24);
-    padding: 10px;
-    height: 550px;
-    margin: auto;
-    .title {
-      height: 50px;
-      font-size: ($FontSize)-3;
-      font-family: $FontFamily;
-      font-style: normal;
-      font-weight: bold;
-      margin-bottom: 30px;
-      p {
-        text-align: center;
-      }
-    }
-    #txtArea {
-      resize: none;
-      padding-left: 20px;
-      font-size: $FontSize;
-      margin: 10px 0;
-      width: 100%;
-      height: 300px;
-      border-style: none;
-      box-sizing: border-box;
-    }
-  }
-  .capsule2 {
-    background: rgb(216, 208, 208);
-    width: 45%;
-    border: 4px solid red;
-    padding: 10px;
-    height: 550px;
-    margin: auto;
-    .title {
-      height: 20px;
-      font-size: ($FontSize)-3;
-      font-family: $FontFamily;
-      font-style: normal;
-      font-weight: bold;
-      margin-bottom: 30px;
-      p {
-        text-align: center;
-      }
-    }
-    label {
-      font-size: $FontSize;
-    }
-    #taskSolution {
-      resize: none;
-      padding-left: 20px;
-      font-size: $FontSize;
-      margin: 10px 0;
-      width: 100%;
-      height: 180px;
-      border-style: none;
-      box-sizing: border-box;
-    }
-    #deleteTaskSolution {
-      resize: none;
-      padding-left: 20px;
-      font-size: $FontSize;
-      margin: 10px 0;
-      width: 100%;
-      height: 130px;
-      border-style: none;
-      box-sizing: border-box;
-    }
-  }
-  .grade {
+
+  .subMain {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    margin: auto;
-    width: 100%;
-    line-height: 50px;
-
-    input {
-      width: 60px;
-      height: 25px;
-      font-size: ($FontSize)-5;
-    }
-    .btn {
-      align-items: center;
-      text-align: center;
-    }
-    #submitScore {
-      height: 40px;
-      margin-left: 150px;
-      font-size: ($FontSize)-5;
-      background-color: green;
-    }
-  }
-  //   #delButton {
-  //     //   background-color: rgb(20, 20, 20);
-  //     background-color: rgb(236, 149, 149);
-
-  //     width: 100px;
-  //     height: 150px;
-  //     text-align: center;
-  //     // line-height: 150px;
-  //     padding: 20px;
-  //     color: aliceblue;
-
-  //     .deleteButton {
-  //       background-color: red;
-  //       color: aliceblue;
-  //       font-family: $FontFamily;
-  //       height: 150px;
-  //     }
-  //   }
-}
-#delButton {
-  //   background-color: rgb(20, 20, 20);
-  background-color: rgb(236, 149, 149);
-
-  width: 80%;
-  height: 150px;
-  text-align: center;
-  line-height: 150px;
-  padding: 20px;
-  color: aliceblue;
-
-  .deleteButton {
-    background-color: red;
-    color: aliceblue;
+    background-color: rgb(20, 20, 20);
     font-family: $FontFamily;
-    height: 150px;
+    flex: 1;
+    .capsule1 {
+      background: rgb(216, 208, 208);
+      width: 45%;
+      border: 4px solid rgb(18, 220, 24);
+      padding: 10px;
+      height: 550px;
+      margin: auto;
+      .title {
+        height: 50px;
+        font-size: ($FontSize)-3;
+        font-family: $FontFamily;
+        font-style: normal;
+        font-weight: bold;
+        margin-bottom: 30px;
+        p {
+          text-align: center;
+        }
+      }
+      #txtArea {
+        resize: none;
+        padding-left: 20px;
+        font-size: $FontSize;
+        margin: 10px 0;
+        width: 100%;
+        height: 300px;
+        border-style: none;
+        box-sizing: border-box;
+      }
+    }
+    .capsule2 {
+      background: rgb(216, 208, 208);
+      width: 45%;
+      border: 4px solid red;
+      padding: 10px;
+      height: 550px;
+      margin: auto;
+      .title {
+        height: 20px;
+        font-size: ($FontSize)-3;
+        font-family: $FontFamily;
+        font-style: normal;
+        font-weight: bold;
+        margin-bottom: 30px;
+        p {
+          text-align: center;
+        }
+      }
+      label {
+        font-size: $FontSize;
+      }
+      #taskSolution {
+        resize: none;
+        padding-left: 20px;
+        font-size: $FontSize;
+        margin: 10px 0;
+        width: 100%;
+        height: 180px;
+        border-style: none;
+        box-sizing: border-box;
+      }
+      #deleteTaskSolution {
+        resize: none;
+        padding-left: 20px;
+        font-size: $FontSize;
+        margin: 10px 0;
+        width: 100%;
+        height: 130px;
+        border-style: none;
+        box-sizing: border-box;
+      }
+    }
+    .grade {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      margin: auto;
+      width: 100%;
+      line-height: 50px;
+
+      input {
+        width: 60px;
+        height: 25px;
+        font-size: ($FontSize)-5;
+      }
+      .btn {
+        align-items: center;
+        text-align: center;
+      }
+      #submitScore {
+        height: 40px;
+        margin-left: 150px;
+        font-size: ($FontSize)-5;
+        background-color: green;
+      }
+    }
+    .capsule3 {
+      // background-color: black;
+      width: 100%;
+      padding: 10px;
+      height: 150px;
+      margin: auto;
+      text-align: center;
+      .delButton {
+        margin-top: 20px;
+        #deleteButton {
+          font-family: $FontFamily;
+          font-size: $FontSize;
+          background-color: red;
+          height: 50px;
+        }
+      }
+    }
   }
 }
+
 footer {
   background-color: black;
   color: aliceblue;
