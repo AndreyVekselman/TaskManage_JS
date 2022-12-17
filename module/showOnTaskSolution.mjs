@@ -16,19 +16,25 @@ function showOnTaskSolution() {
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
       marker = showTaskDetails(task);
+      if (
+        localStudent.studentTasks[marker].flagCheckComplete ||
+        !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
+      ) {
+        taskSolution.disabled = true;
+      }
+
       task.flagSolution = false;
     }
     localStudent.replaceTask(task, task.taskId);
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
-  console.log(localStudent.studentTasks[marker]);
-  if (
-    localStudent.studentTasks[marker].flagCheckComplete ||
-    !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
-  ) {
-    taskSolution.disabled = true;
-  }
+  // if (
+  //   localStudent.studentTasks[marker].flagCheckComplete ||
+  //   !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
+  // ) {
+  //   taskSolution.disabled = true;
+  // }
 
   submitSolutionBtn.addEventListener("click", () => {
     const taskSolution = document.getElementById("taskSolution");
