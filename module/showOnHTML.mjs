@@ -62,7 +62,7 @@ export function showOnHTML(task) {
   const butnSolution = document.createElement("button");
   butnSolution.setAttribute("class", "butnSolution");
   butnSolution.setAttribute("id", "butnSolution");
-  const btntxt = document.createTextNode("To Solution");
+  const btntxt = document.createTextNode("To Task Details");
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   // link.setAttribute("href", "/html/taskCheckDelete.html");
