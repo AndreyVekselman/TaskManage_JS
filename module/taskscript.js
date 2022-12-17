@@ -1,6 +1,7 @@
 import { Task } from "../Task.mjs";
 import { showOnHTML } from "./showOnHTML.mjs";
 import { Student } from "../Student.mjs";
+import { TasksManager } from "../TaskManager.mjs";
 
 let Student1 = new Student();
 Student1.studentTasks = Student1.loadFromLocalStorage();

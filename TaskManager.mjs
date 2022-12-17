@@ -1,5 +1,5 @@
-import { Student } from "../Student.mjs";
-import { Task } from "../Task.mjs";
+import { Student } from "./Student.mjs";
+import { Task } from "./Task.mjs";
 export class TasksManager {
   studentTasks;
   constructor() {
