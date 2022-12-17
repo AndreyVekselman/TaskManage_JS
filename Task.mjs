@@ -3,6 +3,7 @@ export class Task {
   flagComplete;
   flagSolution;
   flagCheck;
+  flagCheckComplete;
   taskSubject;
   taskText;
   taskGrade;
@@ -14,6 +15,8 @@ export class Task {
     this.flagCheck = false;
     this.flagComplete = false;
     this.flagSolution = false;
+    this.flagCheckComplete = false;
+
     this.taskGrade = 0;
     this.taskSubject;
     this.taskId;

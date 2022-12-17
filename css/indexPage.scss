@@ -43,8 +43,11 @@ main {
     padding: 10px;
     height: 250px;
     margin: auto;
+    // float: left;
     .Subject {
+      float: left;
       height: 50px;
+      width: 40%;
       font-size: ($FontSize)-5;
       font-family: $FontFamily;
       font-style: normal;
@@ -52,6 +55,19 @@ main {
       font-weight: bold;
       margin-bottom: 30px;
     }
+    .Subject2 {
+      float: left;
+      height: 50px;
+      width: 40%;
+      font-size: ($FontSize)-5;
+      font-family: $FontFamily;
+      font-style: normal;
+      background-color: aqua;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin-left: 50px;
+    }
+
     .deadLineTime {
       width: 150px;
       height: fit-content;
@@ -72,6 +88,15 @@ main {
         border: 1px solid black;
       }
       #butnSolution {
+        // float: right;
+        height: 30px;
+        width: 50%;
+        margin-left: 5px;
+        font-family: $FontFamily;
+        font-size: ($FontSize)-10;
+        margin-bottom: 20px;
+      }
+      #butnManage {
         // float: right;
         height: 30px;
         width: 50%;

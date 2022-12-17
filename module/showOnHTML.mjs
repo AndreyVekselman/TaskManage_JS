@@ -9,7 +9,13 @@ export function showOnHTML(task) {
   taskSubject.setAttribute("class", "Subject");
   let textNode = document.createTextNode("Subject: " + task.taskSubject);
   taskSubject.appendChild(textNode);
+  //
+  const taskGrade = document.createElement("div");
+  taskGrade.setAttribute("class", "Subject2");
+  let textGradeNode = document.createTextNode("Task Grade " + task.taskGarde);
+  taskGrade.appendChild(textGradeNode);
 
+  //
   const taskText = document.createElement("div");
   taskText.setAttribute("class", "Text");
   textNode = document.createTextNode(task.taskText);
@@ -36,7 +42,7 @@ export function showOnHTML(task) {
   //
   const statusCheck = document.createElement("div");
   statusCheck.setAttribute("class", "status");
-  if (task.flagCheck) {
+  if (task.flagCheckComplete) {
     textNode = document.createTextNode("Checked");
     statusCheck.appendChild(textNode);
     statusCheck.classList.add("green");
@@ -75,8 +81,8 @@ export function showOnHTML(task) {
   const manage = document.createElement("div");
   manage.setAttribute("class", "solution");
   const butnManage = document.createElement("button");
-  butnSolution.setAttribute("class", "butnSolution");
-  butnSolution.setAttribute("id", "butnManage");
+  butnManage.setAttribute("class", "butnSolution");
+  butnManage.setAttribute("id", "butnManage");
   const btnManagetxt = document.createTextNode("Task Check/Delete");
   const linkToManage = document.createElement("a");
   linkToManage.setAttribute("href", "/html/taskCheckDelete.html");
@@ -97,6 +103,10 @@ export function showOnHTML(task) {
 
   //
   mainDiv.appendChild(taskSubject);
+  if (task.flagCheck) {
+    mainDiv.appendChild(taskGrade);
+  }
+  // mainDiv.appendChild(taskGrade);
   mainDiv.appendChild(deadLineTime);
   mainDiv.appendChild(solution);
   mainDiv.appendChild(manage);

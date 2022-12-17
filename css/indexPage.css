@@ -44,13 +44,27 @@ main .mainDiv {
   margin: auto;
 }
 main .mainDiv .Subject {
+  float: left;
   height: 50px;
+  width: 40%;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
   background-color: aqua;
   font-weight: bold;
   margin-bottom: 30px;
+}
+main .mainDiv .Subject2 {
+  float: left;
+  height: 50px;
+  width: 40%;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  background-color: aqua;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-left: 50px;
 }
 main .mainDiv .deadLineTime {
   width: 150px;
@@ -75,6 +89,14 @@ main .mainDiv .solution .status {
   border: 1px solid black;
 }
 main .mainDiv .solution #butnSolution {
+  height: 30px;
+  width: 50%;
+  margin-left: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+main .mainDiv .solution #butnManage {
   height: 30px;
   width: 50%;
   margin-left: 5px;
