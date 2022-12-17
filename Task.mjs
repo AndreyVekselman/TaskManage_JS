@@ -16,7 +16,6 @@ export class Task {
     this.flagComplete = false;
     this.flagSolution = false;
     this.flagCheckComplete = false;
-
     this.taskGrade = 0;
     this.taskSubject;
     this.taskId;

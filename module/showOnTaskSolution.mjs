@@ -11,7 +11,7 @@ import { checkDate } from "./checkDate.mjs";
 function showOnTaskSolution() {
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  let marker = -1;
+  let marker = false;
 
   localStudent.studentTasks.forEach((task) => {
     if (task.flagSolution) {
@@ -30,7 +30,7 @@ function showOnTaskSolution() {
   const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
 
-  if (taskSolution.disabled || marker == -1) {
+  if (taskSolution.disabled || marker == false) {
     submitSolutionBtn.innerText = "Back to tasks";
     submitSolutionBtn.addEventListener("click", () => {
       linkToIndex.setAttribute("href", "/index.html");

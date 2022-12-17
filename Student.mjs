@@ -24,9 +24,8 @@ export class Student {
     this.studentTasks.splice(index, 1, task);
     localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
   }
+  deleteTask(index) {
+    this.studentTasks.splice(index, 1);
+    localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
+  }
 }
-//   saveToLocalStorage(task) {
-//     this.addTask(task);
-//     localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
-//   }
-// }

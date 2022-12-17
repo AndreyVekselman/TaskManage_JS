@@ -4,7 +4,7 @@ import { Student } from "../Student.mjs";
 function showOnCheckDelete() {
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  let marker = -1;
+  let marker = false;
 
   localStudent.studentTasks.forEach((task) => {
     if (task.flagCheck) {
@@ -15,7 +15,8 @@ function showOnCheckDelete() {
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitScoreBtn = document.getElementById("submitScore");
-  if (marker == -1) {
+  const deleteButton = document.getElementById("deleteButton");
+  if (!marker) {
     submitScoreBtn.innerText = "Back to tasks";
     submitScoreBtn.addEventListener("click", () => {
       linkToIndex.setAttribute("href", "/index.html");
@@ -38,6 +39,9 @@ function showOnCheckDelete() {
       } else {
         alert("enter Notes text, at least 5 characters");
       }
+    });
+    deleteButton.addEventListener("click", () => {
+      localStudent.deleteTask(marker);
     });
   }
 }
