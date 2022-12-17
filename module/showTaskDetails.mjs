@@ -18,6 +18,11 @@ export function showTaskDetails(task) {
     taskNotes.value = task.taskTeacherNotes;
     const taskGrade = document.getElementById("gradeScore");
     taskGrade.value = task.taskGrade;
+    const delButtonDiv = document.getElementById("delButton");
+    const delButton = document.createElement("button");
+    delButton.innerText = "DELETE TASK";
+    delButton.setAttribute("id", "deleteButton");
+    delButtonDiv.appendChild(delButton);
   }
   if (task.flagSolution) {
     const taskNotes = document.getElementById("taskNotes");
