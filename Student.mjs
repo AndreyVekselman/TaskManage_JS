@@ -1,16 +1,7 @@
 export class Student {
-  // studentName;
-  // studentID;
-  // studentTasks;
-  // studentGrade;
   studentTasks;
   constructor() {
-    // this.studentName;
-    // this.studentID;
-    // this.studentGrade;
     this.studentTasks = [];
-    // this.saveToLocalStorage();
-    // this.loadFromLocalStorage();
   }
   addTask(task) {
     this.studentTasks.push(task);
