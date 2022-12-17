@@ -82,7 +82,17 @@ main .capsule2 #taskSolution {
   font-size: 25px;
   margin: 10px 0;
   width: 100%;
-  height: 300px;
+  height: 180px;
+  border-style: none;
+  box-sizing: border-box;
+}
+main .capsule2 #taskNotes {
+  resize: none;
+  padding-left: 20px;
+  font-size: 25px;
+  margin: 10px 0;
+  width: 100%;
+  height: 130px;
   border-style: none;
   box-sizing: border-box;
 }
