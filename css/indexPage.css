@@ -44,15 +44,21 @@ main .mainDiv {
   margin: auto;
 }
 main .mainDiv .Subject {
+  text-align: center;
   float: left;
   height: 50px;
   width: 40%;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
-  background-color: aqua;
   font-weight: bold;
   margin-bottom: 30px;
+}
+main .mainDiv .Subject .txtArea {
+  width: 100%;
+  resize: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
 }
 main .mainDiv .Subject2 {
   float: left;
@@ -71,7 +77,9 @@ main .mainDiv .deadLineTime {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 19px;
 }
 main .mainDiv .solution {
   width: 100%;

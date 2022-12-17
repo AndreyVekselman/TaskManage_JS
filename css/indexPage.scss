@@ -45,15 +45,21 @@ main {
     margin: auto;
     // float: left;
     .Subject {
+      text-align: center;
       float: left;
       height: 50px;
       width: 40%;
       font-size: ($FontSize)-5;
       font-family: $FontFamily;
       font-style: normal;
-      background-color: aqua;
       font-weight: bold;
       margin-bottom: 30px;
+      .txtArea {
+        width: 100%;
+        resize: none;
+        font-family: $FontFamily;
+        font-size: ($FontSize)-8;
+      }
     }
     .Subject2 {
       float: left;
@@ -69,9 +75,12 @@ main {
     }
 
     .deadLineTime {
+      // margin-top: 20px;
       width: 150px;
       height: fit-content;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      font-family: $FontFamily;
+      font-size: ($FontSize)-6;
     }
     .solution {
       width: 100%;
