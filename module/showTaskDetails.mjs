@@ -19,10 +19,14 @@ export function showTaskDetails(task) {
     const taskGrade = document.getElementById("gradeScore");
     taskGrade.value = task.taskGrade;
     const delButtonDiv = document.getElementById("delButton");
+    const linkToIndex = document.createElement("a");
+    linkToIndex.setAttribute("href", "/index.html");
+
     const delButton = document.createElement("button");
     delButton.innerText = "DELETE TASK";
     delButton.setAttribute("id", "deleteButton");
-    delButtonDiv.appendChild(delButton);
+    linkToIndex.appendChild(delButton);
+    delButtonDiv.appendChild(linkToIndex);
   }
   if (task.flagSolution) {
     const taskNotes = document.getElementById("taskNotes");

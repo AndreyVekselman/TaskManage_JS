@@ -26,6 +26,9 @@ export class Student {
   }
   deleteTask(index) {
     this.studentTasks.splice(index, 1);
+    this.studentTasks.forEach((task, index) => {
+      task.taskId = index;
+    });
     localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
   }
 }
