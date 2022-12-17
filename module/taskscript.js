@@ -1,8 +1,6 @@
 import { Task } from "../Task.mjs";
 import { showOnHTML } from "./showOnHTML.mjs";
 import { Student } from "../Student.mjs";
-// import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
-// import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
 let Student1 = new Student();
 Student1.studentTasks = Student1.loadFromLocalStorage();
@@ -21,7 +19,6 @@ createTaskBtn.addEventListener("click", () => {
         myTask.taskId = Student1.studentTasks.length;
         myTask.taskDeadlineTime = taskDeadLineTime.value;
         Student1.addTask(myTask);
-        myTask.showTask();
       } else {
         alert("enter correct Date for Dead line for submission");
       }
