@@ -7,8 +7,13 @@ export function showOnHTML(task) {
 
   const taskSubject = document.createElement("div");
   taskSubject.setAttribute("class", "Subject");
-  let textNode = document.createTextNode("Subject: " + task.taskSubject);
+  let textNode = document.createTextNode("Subject: ");
   taskSubject.appendChild(textNode);
+  const txtArea = document.createElement("textarea");
+  txtArea.setAttribute("class", "txtArea");
+  txtArea.disabled = true;
+  txtArea.value = task.taskSubject;
+  taskSubject.appendChild(txtArea);
   //
   const taskGrade = document.createElement("div");
   taskGrade.setAttribute("class", "Subject2");
