@@ -12,12 +12,17 @@ export function showTaskDetails(task) {
   txtDiv.appendChild(txtArea);
   const taskSolution = document.getElementById("taskSolution");
   taskSolution.value = task.taskTextSolution;
-  //
+  // on taskCheckDelete
   if (task.flagCheck) {
     const taskNotes = document.getElementById("taskNotes");
     taskNotes.value = task.taskTeacherNotes;
     const taskGrade = document.getElementById("gradeScore");
     taskGrade.value = task.taskGrade;
   }
+  if (task.flagSolution) {
+    const taskNotes = document.getElementById("taskNotes");
+    taskNotes.value = task.taskTeacherNotes;
+  }
+
   return task.taskId;
 }
