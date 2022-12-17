@@ -21,11 +21,14 @@ Header #linkToCreatePage {
   width: 150px;
   margin: auto;
 }
-Header a {
-  color: aliceblue;
+Header #linkToCreatePage #addTaskBtn {
+  width: 150px;
+  height: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
 }
-Header a:hover {
-  color: red;
+Header #linkToCreatePage #addTaskBtn:hover {
+  background-color: red;
 }
 
 main {

@@ -96,6 +96,14 @@ main .capsule2 #taskNotes {
   border-style: none;
   box-sizing: border-box;
 }
+main .capsule2 .btn {
+  align-items: center;
+  text-align: center;
+}
+main .capsule2 .btn #submitSolution {
+  height: 40px;
+  font-size: 20px;
+}
 
 footer {
   background-color: black;

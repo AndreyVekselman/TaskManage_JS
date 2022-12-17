@@ -22,13 +22,23 @@ Header {
   #linkToCreatePage {
     width: 150px;
     margin: auto;
+    #addTaskBtn {
+      // background-color: blue;
+      width: 150px;
+      height: 40px;
+      font-family: $FontFamily;
+      font-size: ($FontSize)-8px;
+    }
+    #addTaskBtn:hover {
+      background-color: red;
+    }
   }
-  a {
-    color: aliceblue;
-  }
-  a:hover {
-    color: red;
-  }
+  // a {
+  //   color: aliceblue;
+  // }
+  // a:hover {
+  //   color: red;
+  // }
 }
 main {
   display: flex;

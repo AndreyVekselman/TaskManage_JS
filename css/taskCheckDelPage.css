@@ -90,7 +90,7 @@ main .subMain .capsule2 #taskSolution {
   border-style: none;
   box-sizing: border-box;
 }
-main .subMain .capsule2 #taskNotes {
+main .subMain .capsule2 #deleteTaskSolution {
   resize: none;
   padding-left: 20px;
   font-size: 25px;

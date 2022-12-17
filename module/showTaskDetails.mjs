@@ -32,6 +32,4 @@ export function showTaskDetails(task) {
     const taskNotes = document.getElementById("taskNotes");
     taskNotes.value = task.taskTeacherNotes;
   }
-
-  // return task.taskId;
 }
