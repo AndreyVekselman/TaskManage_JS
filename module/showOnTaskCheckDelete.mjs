@@ -4,7 +4,7 @@ import { Student } from "../Student.mjs";
 function showOnCheckDelete() {
   let localStudent = new Student();
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
-  let marker = false;
+  let marker = -1;
 
   localStudent.studentTasks.forEach((task) => {
     if (task.flagCheck) {
@@ -16,7 +16,7 @@ function showOnCheckDelete() {
   const linkToIndex = document.getElementById("linkToIndex");
   const submitScoreBtn = document.getElementById("submitScore");
   const deleteButton = document.getElementById("deleteButton");
-  if (!marker) {
+  if (marker == -1) {
     submitScoreBtn.innerText = "Back to tasks";
     submitScoreBtn.addEventListener("click", () => {
       linkToIndex.setAttribute("href", "/index.html");
