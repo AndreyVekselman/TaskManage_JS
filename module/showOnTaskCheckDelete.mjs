@@ -19,10 +19,18 @@ function showOnCheckDelete() {
     const taskNotes = document.getElementById("taskNotes");
     localStudent.studentTasks[marker].taskTeacherNotes = "";
     if (taskNotes.value.length > 4) {
-      localStudent.studentTasks[marker].taskTeacherNotes = taskNotes.value;
-      localStudent.studentTasks[marker].flagCheckComplete = true;
-      localStudent.replaceTask(localStudent.studentTasks[marker], marker);
-      linkToIndex.setAttribute("href", "/index.html");
+      const gradeScore = document.getElementById("gradeScore");
+      console.log(gradeScore.value);
+      if (0 < gradeScore.value < 100) {
+        localStudent.studentTasks[marker].taskTeacherNotes = taskNotes.value;
+        localStudent.studentTasks[marker].flagCheckComplete = true;
+        localStudent.studentTasks[marker].taskGrade = gradeScore;
+        localStudent.replaceTask(localStudent.studentTasks[marker], marker);
+        linkToIndex.setAttribute("href", "/index.html"); //
+        linkToIndex.setAttribute("target", "_blank");
+      } else {
+        alert("enter correct score from 0 to 100");
+      }
     } else {
       alert("enter Notes text, at least 5 characters");
     }
