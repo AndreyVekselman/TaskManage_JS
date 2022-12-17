@@ -17,9 +17,8 @@ export function showOnHTML(task) {
   //
   const taskGrade = document.createElement("div");
   taskGrade.setAttribute("class", "Subject2");
-  let textGradeNode = document.createTextNode("Task Grade " + task.taskGarde);
+  let textGradeNode = document.createTextNode("Task Grade: " + task.taskGrade);
   taskGrade.appendChild(textGradeNode);
-
   //
   const taskText = document.createElement("div");
   taskText.setAttribute("class", "Text");
@@ -108,7 +107,7 @@ export function showOnHTML(task) {
 
   //
   mainDiv.appendChild(taskSubject);
-  if (task.flagCheck) {
+  if (task.flagCheckComplete) {
     mainDiv.appendChild(taskGrade);
   }
   // mainDiv.appendChild(taskGrade);

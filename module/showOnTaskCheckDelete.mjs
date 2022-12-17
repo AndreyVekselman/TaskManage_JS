@@ -41,6 +41,7 @@ function showOnCheckDelete() {
     } else {
       alert("enter Notes text, at least 5 characters");
     }
+    console.log(localStudent.studentTasks[marker]);
   });
 }
 showOnCheckDelete();
