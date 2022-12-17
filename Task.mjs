@@ -23,9 +23,4 @@ export class Task {
     this.taskTextSolution = "";
     this.taskTeacherNotes = "";
   }
-  showTask() {
-    console.log(
-      `Perform task: ${this.taskSubject} do ${this.taskText}. show if task complete: ${this.flagComplete} task ID is ${this.taskId} Deadline for submission ${this.taskDeadlineTime}`
-    );
-  }
 }
