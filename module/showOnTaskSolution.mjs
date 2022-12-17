@@ -6,6 +6,7 @@ import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
 import { showTaskDetails } from "./showTaskDetails.mjs";
 import { Student } from "../Student.mjs";
+import { checkDate } from "./checkDate.mjs";
 
 function showOnTaskSolution() {
   let localStudent = new Student();
@@ -21,10 +22,18 @@ function showOnTaskSolution() {
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
+  console.log(localStudent.studentTasks[marker]);
+  if (
+    localStudent.studentTasks[marker].flagCheckComplete ||
+    !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
+  ) {
+    taskSolution.disabled = true;
+  }
+
   submitSolutionBtn.addEventListener("click", () => {
     const taskSolution = document.getElementById("taskSolution");
     localStudent.studentTasks[marker].taskTextSolution = "";
-    if (taskSolution.value.length > 4) {
+    if (taskSolution.value.length >= 5) {
       localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
       localStudent.studentTasks[marker].flagComplete = true;
       localStudent.replaceTask(localStudent.studentTasks[marker], marker);
