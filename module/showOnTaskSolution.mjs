@@ -15,7 +15,6 @@ function showOnTaskSolution() {
 
   localStudent.studentTasks.forEach((task, index) => {
     if (task.flagSolution) {
-      // marker = showTaskDetails(task);
       showTaskDetails(task);
       marker = index;
       if (
