@@ -64,13 +64,13 @@ main .mainDiv .Subject .txtArea {
   font-size: 17px;
 }
 main .mainDiv .Subject2 {
+  text-align: center;
   float: left;
   height: 50px;
   width: 40%;
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
-  background-color: aqua;
   font-weight: bold;
   margin-bottom: 30px;
   margin-left: 50px;
