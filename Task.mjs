@@ -10,16 +10,16 @@ export class Task {
   taskDeadlineTime;
   taskTextSolution;
   taskTeacherNotes;
-  constructor() {
-    this.taskText;
+  constructor(taskSubject, taskText, taskId, taskDeadLineTime) {
+    this.taskText = taskText;
     this.flagCheck = false;
     this.flagComplete = false;
     this.flagSolution = false;
     this.flagCheckComplete = false;
     this.taskGrade = 0;
-    this.taskSubject;
-    this.taskId;
-    this.taskDeadlineTime;
+    this.taskSubject = taskSubject;
+    this.taskId = taskId;
+    this.taskDeadlineTime = taskDeadLineTime;
     this.taskTextSolution = "";
     this.taskTeacherNotes = "";
   }

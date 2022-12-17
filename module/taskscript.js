@@ -6,6 +6,10 @@ import { TasksManager } from "../TaskManager.mjs";
 let Student1 = new Student();
 Student1.studentTasks = Student1.loadFromLocalStorage();
 
+const TM = new TasksManager();
+const studentTasks = TM.getAllTasks();
+console.log(studentTasks);
+
 const createTaskBtn = document.getElementById("Btn_OK");
 createTaskBtn.addEventListener("click", () => {
   const taskSubject = document.getElementById("taskSubject");
@@ -14,12 +18,25 @@ createTaskBtn.addEventListener("click", () => {
     if (taskText.value.length > 4) {
       const taskDeadLineTime = document.getElementById("taskDate");
       if (taskDeadLineTime.value) {
-        const myTask = new Task();
-        myTask.taskSubject = taskSubject.value;
-        myTask.taskText = taskText.value;
-        myTask.taskId = Student1.studentTasks.length;
-        myTask.taskDeadlineTime = taskDeadLineTime.value;
+        // const myTask = new Task();
+        // myTask.taskSubject = taskSubject.value;
+        // myTask.taskText = taskText.value;
+        // myTask.taskId = Student1.studentTasks.length;
+        // myTask.taskDeadlineTime = taskDeadLineTime.value;
+
+        const myTask = new Task(
+          taskSubject.value,
+          taskText.value,
+          Student1.studentTasks.length,
+          taskDeadLineTime.value
+        );
         Student1.addTask(myTask);
+        // TM.addNewTask(
+        //   taskSubject.value,
+        //   taskText.value,
+        //   studentTasks.length,
+        //   taskDeadLineTime.value
+        // );
       } else {
         alert("enter correct Date for Dead line for submission");
       }

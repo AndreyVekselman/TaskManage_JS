@@ -5,10 +5,10 @@ export class TasksManager {
   constructor() {
     this.getAllTasks();
   }
-  addNewTask(task) {
-    // const newTask = new Task();
+  addNewTask(taskSubject, taskText, taskId, taskDeadLineTime) {
+    const newTask = new Task(taskSubject, taskText, taskId, taskDeadLineTime);
     const newStudent = new Student();
-    newStudent.addTask(task);
+    newStudent.addTask(newTask);
   }
   getAllTasks() {
     const newStudent = new Student();
