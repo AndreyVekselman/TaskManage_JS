@@ -34,8 +34,6 @@ function showOnTaskSolution() {
     submitSolutionBtn.innerText = "Back to tasks";
     submitSolutionBtn.addEventListener("click", () => {
       linkToIndex.setAttribute("href", "/index.html");
-      //
-      linkToIndex.setAttribute("target", "_blank");
     });
   } else {
     submitSolutionBtn.addEventListener("click", () => {
@@ -46,8 +44,6 @@ function showOnTaskSolution() {
         localStudent.studentTasks[marker].flagComplete = true;
         localStudent.replaceTask(localStudent.studentTasks[marker], marker);
         linkToIndex.setAttribute("href", "/index.html");
-        //
-        linkToIndex.setAttribute("target", "_blank");
       } else {
         alert("enter solution text, at least 5 characters");
       }
