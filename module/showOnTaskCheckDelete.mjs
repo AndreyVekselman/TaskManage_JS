@@ -6,9 +6,10 @@ function showOnCheckDelete() {
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
   let marker = -1;
 
-  localStudent.studentTasks.forEach((task) => {
+  localStudent.studentTasks.forEach((task, index) => {
     if (task.flagCheck) {
-      marker = showTaskDetails(task);
+      showTaskDetails(task);
+      marker = index;
       task.flagCheck = false;
     }
     localStudent.replaceTask(task, task.taskId);

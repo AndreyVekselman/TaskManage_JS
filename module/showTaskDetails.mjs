@@ -29,5 +29,5 @@ export function showTaskDetails(task) {
     taskNotes.value = task.taskTeacherNotes;
   }
 
-  return task.taskId;
+  // return task.taskId;
 }

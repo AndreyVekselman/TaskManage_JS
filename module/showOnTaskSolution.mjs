@@ -13,9 +13,11 @@ function showOnTaskSolution() {
   localStudent.studentTasks = localStudent.loadFromLocalStorage();
   let marker = -1;
 
-  localStudent.studentTasks.forEach((task) => {
+  localStudent.studentTasks.forEach((task, index) => {
     if (task.flagSolution) {
-      marker = showTaskDetails(task);
+      // marker = showTaskDetails(task);
+      showTaskDetails(task);
+      marker = index;
       if (
         localStudent.studentTasks[marker].flagCheckComplete ||
         !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
