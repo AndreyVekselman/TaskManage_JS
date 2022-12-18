@@ -27,7 +27,7 @@ body {
   padding-left: 20px;
   padding-top: 10px;
   background-color: rgb(153, 193, 216);
-  height: 550px;
+  height: 650px;
   background-image: linear-gradient(180deg, rgb(147, 189, 213), rgb(182, 214, 232));
 }
 .main .form label {
