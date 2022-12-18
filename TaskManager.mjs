@@ -12,7 +12,15 @@ export class TasksManager {
   }
   getAllTasks() {
     const newStudent = new Student();
-    this.studentTasks = newStudent.loadFromLocalStorage();
+    this.studentTasks.newStudenloadFromLocalStorage();
     return this.studentTasks;
+  }
+  replaceStudentTask(task, index) {
+    const newStudent = new Student();
+    newStudent.replaceTask(task, index);
+  }
+  deleteStudentTask(index) {
+    const newSudent = new Student();
+    newSudent.deleteTask(index);
   }
 }
