@@ -10,13 +10,10 @@ import { checkDate } from "./checkDate.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
 function showOnTaskSolution() {
-  // let localStudent = new Student();
-  // localStudent.studentTasks = localStudent.loadFromLocalStorage();
   const MT = new TasksManager();
   const studentTasks = MT.getAllTasks();
   let marker = -1;
 
-  // localStudent.studentTasks.forEach((task, index) => {
   studentTasks.forEach((task, index) => {
     if (task.flagSolution) {
       showTaskDetails(task);
@@ -27,7 +24,6 @@ function showOnTaskSolution() {
       ) {
         taskSolution.disabled = true;
       }
-
       task.flagSolution = false;
     }
     MT.replaceStudentTask(task, task.taskId);
