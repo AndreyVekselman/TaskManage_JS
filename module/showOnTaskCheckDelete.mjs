@@ -1,5 +1,4 @@
 import { showTaskDetails } from "./showTaskDetails.mjs";
-import { Student } from "../Student.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
 function showOnCheckDelete() {
@@ -12,8 +11,8 @@ function showOnCheckDelete() {
       showTaskDetails(task);
       marker = index;
       task.flagCheck = false;
+      MT.replaceStudentTask(task, index);
     }
-    MT.replaceStudentTask(task, task.taskId);
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitScoreBtn = document.getElementById("submitScore");

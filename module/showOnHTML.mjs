@@ -66,8 +66,6 @@ export function showOnHTML(task) {
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   //
-  // link.setAttribute("target", "_blank");
-  //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
     const MT = new TasksManager();
@@ -88,8 +86,6 @@ export function showOnHTML(task) {
   const btnManagetxt = document.createTextNode("Task Check/Delete");
   const linkToManage = document.createElement("a");
   linkToManage.setAttribute("href", "/html/taskCheckDelete.html");
-  //
-  // linkToManage.setAttribute("target", "_blank");
   //
   butnManage.addEventListener("click", () => {
     task.flagCheck = true;
