@@ -1,12 +1,13 @@
 import { showTaskDetails } from "./showTaskDetails.mjs";
 import { Student } from "../Student.mjs";
+import { TasksManager } from "../TaskManager.mjs";
 
 function showOnCheckDelete() {
   //
   // let localStudent = new Student();
   // localStudent.studentTasks = localStudent.loadFromLocalStorage();
   const MT = new TasksManager();
-  let studentTasks = MT.getAllTasks();
+  const studentTasks = MT.getAllTasks();
   let marker = -1;
 
   studentTasks.forEach((task, index) => {
@@ -47,7 +48,8 @@ function showOnCheckDelete() {
       }
     });
     deleteButton.addEventListener("click", () => {
-      localStudent.deleteTask(marker);
+      // localStudent.deleteTask(marker);
+      MT.deleteStudentTask(marker);
     });
   }
 }

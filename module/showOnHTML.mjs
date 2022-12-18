@@ -66,9 +66,8 @@ export function showOnHTML(task) {
   const btntxt = document.createTextNode("To Task Details");
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
-  // link.setAttribute("href", "/html/taskCheckDelete.html");
   //
-  // link.setAttribute("target", "_blank");
+  link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
@@ -76,7 +75,7 @@ export function showOnHTML(task) {
     // localStudent.studentTasks = localStudent.loadFromLocalStorage();
     // localStudent.replaceTask(task, task.taskId);
     const MT = new TasksManager();
-    studentTasks = MT.getAllTasks();
+    // let studentTasks = MT.getAllTasks();
     MT.replaceStudentTask(task, task.taskId);
   });
 
@@ -95,7 +94,7 @@ export function showOnHTML(task) {
   const linkToManage = document.createElement("a");
   linkToManage.setAttribute("href", "/html/taskCheckDelete.html");
   //
-  // linkToManage.setAttribute("target", "_blank");
+  linkToManage.setAttribute("target", "_blank");
   //
   butnManage.addEventListener("click", () => {
     task.flagCheck = true;
@@ -104,7 +103,7 @@ export function showOnHTML(task) {
     // localStudent.replaceTask(task, task.taskId);
     //
     const MT = new TasksManager();
-    studentTasks = MT.getAllTasks();
+    // studentTasks = MT.getAllTasks();
     MT.replaceStudentTask(task, task.taskId);
   });
 

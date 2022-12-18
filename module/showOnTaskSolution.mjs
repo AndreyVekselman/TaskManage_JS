@@ -13,7 +13,7 @@ function showOnTaskSolution() {
   // let localStudent = new Student();
   // localStudent.studentTasks = localStudent.loadFromLocalStorage();
   const MT = new TasksManager();
-  let studentTasks = MT.getAllTasks();
+  const studentTasks = MT.getAllTasks();
   let marker = -1;
 
   // localStudent.studentTasks.forEach((task, index) => {
