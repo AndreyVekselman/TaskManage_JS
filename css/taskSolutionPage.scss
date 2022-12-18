@@ -103,9 +103,9 @@ main {
         height: 40px;
         font-size: ($FontSize)-5;
         // background-color: red;
-        #submitSolution:hover {
-          background-color: green;
-        }
+      }
+      #submitSolution:hover {
+        background-color: green;
       }
     }
   }

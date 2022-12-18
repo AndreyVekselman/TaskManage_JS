@@ -104,7 +104,7 @@ main .capsule2 .btn #submitSolution {
   height: 40px;
   font-size: 20px;
 }
-main .capsule2 .btn #submitSolution #submitSolution:hover {
+main .capsule2 .btn #submitSolution:hover {
   background-color: green;
 }
 
