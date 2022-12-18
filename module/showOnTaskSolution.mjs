@@ -18,8 +18,8 @@ function showOnTaskSolution() {
         taskSolution.disabled = true;
       }
       task.flagSolution = false;
+      MT.replaceStudentTask(task, index);
     }
-    MT.replaceStudentTask(task, task.taskId);
   });
 
   const linkToIndex = document.getElementById("linkToIndex");
