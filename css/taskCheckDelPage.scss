@@ -114,7 +114,8 @@ main {
         height: 25px;
         font-size: ($FontSize)-5;
       }
-      .btn {
+      .btn,
+      .btnSubmit {
         align-items: center;
         text-align: center;
       }

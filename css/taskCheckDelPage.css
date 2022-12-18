@@ -113,7 +113,8 @@ main .subMain .grade input {
   height: 25px;
   font-size: 20px;
 }
-main .subMain .grade .btn {
+main .subMain .grade .btn,
+main .subMain .grade .btnSubmit {
   align-items: center;
   text-align: center;
 }
