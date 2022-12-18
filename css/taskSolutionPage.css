@@ -103,7 +103,9 @@ main .capsule2 .btn {
 main .capsule2 .btn #submitSolution {
   height: 40px;
   font-size: 20px;
-  background-color: red;
+}
+main .capsule2 .btn #submitSolution #submitSolution:hover {
+  background-color: green;
 }
 
 footer {

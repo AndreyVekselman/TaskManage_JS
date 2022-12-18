@@ -102,7 +102,10 @@ main {
       #submitSolution {
         height: 40px;
         font-size: ($FontSize)-5;
-        background-color: red;
+        // background-color: red;
+        #submitSolution:hover {
+          background-color: green;
+        }
       }
     }
   }
