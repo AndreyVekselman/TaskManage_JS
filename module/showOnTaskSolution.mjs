@@ -5,7 +5,6 @@ import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
 import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 
 import { showTaskDetails } from "./showTaskDetails.mjs";
-import { Student } from "../Student.mjs";
 import { checkDate } from "./checkDate.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
