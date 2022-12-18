@@ -21,14 +21,25 @@ function showOnTaskSolution() {
     }
     MT.replaceStudentTask(task, task.taskId);
   });
+
   const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
 
   if (taskSolution.disabled || marker == -1) {
-    submitSolutionBtn.innerText = "Back to tasks";
-    submitSolutionBtn.addEventListener("click", () => {
-      linkToIndex.setAttribute("href", "/index.html");
-    });
+    //
+    const txt = document.getElementById("noButton");
+    const txtNode = document.createTextNode(
+      "Task all ready checked or time expired"
+    );
+    const btnDiv = document.getElementById("btn");
+    txt.appendChild(txtNode);
+    btnDiv.appendChild(txt);
+    submitSolutionBtn.disabled = true;
+    //
+    // submitSolutionBtn.innerText = "Back to tasks";
+    // submitSolutionBtn.addEventListener("click", () => {
+    //   linkToIndex.setAttribute("href", "/index.html");
+    // });
   } else {
     submitSolutionBtn.addEventListener("click", () => {
       const taskSolution = document.getElementById("taskSolution");
