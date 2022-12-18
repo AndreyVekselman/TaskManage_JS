@@ -54,6 +54,15 @@ main {
       border-style: none;
       box-sizing: border-box;
     }
+    .btn {
+      align-items: center;
+      text-align: center;
+      #linkToIndex1 {
+        height: 40px;
+        font-size: ($FontSize)-5;
+        // background-color: red;
+      }
+    }
   }
   .capsule2 {
     background: rgb(216, 208, 208);

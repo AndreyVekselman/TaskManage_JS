@@ -54,6 +54,14 @@ main .capsule1 #txtArea {
   border-style: none;
   box-sizing: border-box;
 }
+main .capsule1 .btn {
+  align-items: center;
+  text-align: center;
+}
+main .capsule1 .btn #linkToIndex1 {
+  height: 40px;
+  font-size: 20px;
+}
 main .capsule2 {
   background: rgb(216, 208, 208);
   width: 45%;
