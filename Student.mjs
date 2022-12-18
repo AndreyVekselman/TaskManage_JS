@@ -1,9 +1,10 @@
 export class Student {
   studentTasks;
   constructor() {
-    this.studentTasks = [];
+    this.studentTasks;
   }
   addTask(task) {
+    this.studentTasks = this.loadFromLocalStorage();
     this.studentTasks.push(task);
     localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
   }
@@ -12,10 +13,12 @@ export class Student {
     return this.studentTasks;
   }
   replaceTask(task, index) {
+    this.studentTasks = this.loadFromLocalStorage();
     this.studentTasks.splice(index, 1, task);
     localStorage.setItem("studentTasks", JSON.stringify(this.studentTasks));
   }
   deleteTask(index) {
+    this.studentTasks = this.loadFromLocalStorage();
     this.studentTasks.splice(index, 1);
     this.studentTasks.forEach((task, index) => {
       task.taskId = index;

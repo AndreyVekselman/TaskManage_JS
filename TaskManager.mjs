@@ -6,8 +6,8 @@ export class TasksManager {
     this.getAllTasks();
   }
   addNewTask(taskSubject, taskText, taskId, taskDeadLineTime) {
-    const newTask = new Task(taskSubject, taskText, taskId, taskDeadLineTime);
-    const newStudent = new Student();
+    let newTask = new Task(taskSubject, taskText, taskId, taskDeadLineTime);
+    let newStudent = new Student();
     newStudent.addTask(newTask);
   }
   getAllTasks() {
