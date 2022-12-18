@@ -35,11 +35,6 @@ function showOnTaskSolution() {
     txt.appendChild(txtNode);
     btnDiv.appendChild(txt);
     submitSolutionBtn.disabled = true;
-    //
-    // submitSolutionBtn.innerText = "Back to tasks";
-    // submitSolutionBtn.addEventListener("click", () => {
-    //   linkToIndex.setAttribute("href", "/index.html");
-    // });
   } else {
     submitSolutionBtn.addEventListener("click", () => {
       const taskSolution = document.getElementById("taskSolution");
