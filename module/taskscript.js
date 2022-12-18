@@ -1,6 +1,3 @@
-import { Task } from "../Task.mjs";
-import { showOnHTML } from "./showOnHTML.mjs";
-import { Student } from "../Student.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
 const TM = new TasksManager();
