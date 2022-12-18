@@ -20,7 +20,7 @@ export class TasksManager {
     newStudent.replaceTask(task, index);
   }
   deleteStudentTask(index) {
-    const newSudent = new Student();
-    newSudent.deleteTask(index);
+    const newStudent = new Student();
+    newStudent.deleteTask(index);
   }
 }
