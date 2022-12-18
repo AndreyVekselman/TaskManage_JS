@@ -3,9 +3,6 @@ import { Student } from "../Student.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
 function showOnCheckDelete() {
-  //
-  // let localStudent = new Student();
-  // localStudent.studentTasks = localStudent.loadFromLocalStorage();
   const MT = new TasksManager();
   const studentTasks = MT.getAllTasks();
   let marker = -1;
@@ -16,7 +13,6 @@ function showOnCheckDelete() {
       marker = index;
       task.flagCheck = false;
     }
-    // localStudent.replaceTask(task, task.taskId);
     MT.replaceStudentTask(task, task.taskId);
   });
   const linkToIndex = document.getElementById("linkToIndex");
@@ -37,7 +33,6 @@ function showOnCheckDelete() {
           studentTasks[marker].taskTeacherNotes = taskNotes.value;
           studentTasks[marker].flagCheckComplete = true;
           studentTasks[marker].taskGrade = gradeScore;
-          // replaceTask(localStudent.studentTasks[marker], marker);
           MT.replaceStudentTask(studentTasks[marker], marker);
           linkToIndex.setAttribute("href", "/index.html");
         } else {
@@ -48,7 +43,6 @@ function showOnCheckDelete() {
       }
     });
     deleteButton.addEventListener("click", () => {
-      // localStudent.deleteTask(marker);
       MT.deleteStudentTask(marker);
     });
   }
