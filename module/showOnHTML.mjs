@@ -1,4 +1,3 @@
-import { Student } from "../Student.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 //show the tasks to an index HTML page
 export function showOnHTML(task) {
@@ -67,15 +66,11 @@ export function showOnHTML(task) {
   const link = document.createElement("a");
   link.setAttribute("href", "/html/taskSolutionPage.html");
   //
-  link.setAttribute("target", "_blank");
+  // link.setAttribute("target", "_blank");
   //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
-    // const localStudent = new Student();
-    // localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    // localStudent.replaceTask(task, task.taskId);
     const MT = new TasksManager();
-    // let studentTasks = MT.getAllTasks();
     MT.replaceStudentTask(task, task.taskId);
   });
 
@@ -94,16 +89,11 @@ export function showOnHTML(task) {
   const linkToManage = document.createElement("a");
   linkToManage.setAttribute("href", "/html/taskCheckDelete.html");
   //
-  linkToManage.setAttribute("target", "_blank");
+  // linkToManage.setAttribute("target", "_blank");
   //
   butnManage.addEventListener("click", () => {
     task.flagCheck = true;
-    // const localStudent = new Student();
-    // localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    // localStudent.replaceTask(task, task.taskId);
-    //
     const MT = new TasksManager();
-    // studentTasks = MT.getAllTasks();
     MT.replaceStudentTask(task, task.taskId);
   });
 
@@ -117,7 +107,6 @@ export function showOnHTML(task) {
   if (task.flagCheckComplete) {
     mainDiv.appendChild(taskGrade);
   }
-  // mainDiv.appendChild(taskGrade);
   mainDiv.appendChild(deadLineTime);
   mainDiv.appendChild(solution);
   mainDiv.appendChild(manage);
