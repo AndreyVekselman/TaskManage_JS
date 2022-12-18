@@ -2,17 +2,21 @@ import { showTaskDetails } from "./showTaskDetails.mjs";
 import { Student } from "../Student.mjs";
 
 function showOnCheckDelete() {
-  let localStudent = new Student();
-  localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  //
+  // let localStudent = new Student();
+  // localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  const MT = new TasksManager();
+  let studentTasks = MT.getAllTasks();
   let marker = -1;
 
-  localStudent.studentTasks.forEach((task, index) => {
+  studentTasks.forEach((task, index) => {
     if (task.flagCheck) {
       showTaskDetails(task);
       marker = index;
       task.flagCheck = false;
     }
-    localStudent.replaceTask(task, task.taskId);
+    // localStudent.replaceTask(task, task.taskId);
+    MT.replaceStudentTask(task, task.taskId);
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitScoreBtn = document.getElementById("submitScore");
@@ -26,13 +30,14 @@ function showOnCheckDelete() {
     submitScoreBtn.addEventListener("click", () => {
       const gradeScore = Number(document.getElementById("gradeScore").value);
       const taskNotes = document.getElementById("taskNotes");
-      localStudent.studentTasks[marker].taskTeacherNotes = "";
+      studentTasks[marker].taskTeacherNotes = "";
       if (taskNotes.value.length >= 5) {
         if (gradeScore <= 100 && gradeScore > 0) {
-          localStudent.studentTasks[marker].taskTeacherNotes = taskNotes.value;
-          localStudent.studentTasks[marker].flagCheckComplete = true;
-          localStudent.studentTasks[marker].taskGrade = gradeScore;
-          localStudent.replaceTask(localStudent.studentTasks[marker], marker);
+          studentTasks[marker].taskTeacherNotes = taskNotes.value;
+          studentTasks[marker].flagCheckComplete = true;
+          studentTasks[marker].taskGrade = gradeScore;
+          // replaceTask(localStudent.studentTasks[marker], marker);
+          MT.replaceStudentTask(studentTasks[marker], marker);
           linkToIndex.setAttribute("href", "/index.html");
         } else {
           alert("enter correct score from 1 to 100");

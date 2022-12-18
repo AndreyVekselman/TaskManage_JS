@@ -2,15 +2,18 @@ import { removeItems } from "./removeItems.mjs";
 import { showOnHTML } from "./showOnHTML.mjs";
 // import { loadFromLocalStorage } from "./loadFromLocalStorage.mjs";
 import { Student } from "../Student.mjs";
+import { TasksManager } from "../TaskManager.mjs";
 
 export function freshMainScreen() {
-  let localStudent = new Student();
-  localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  // let localStudent = new Student();
+  // localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  const MT = new TasksManager();
+  let studentTasks = MT.getAllTasks();
 
   removeItems();
 
-  if (localStudent.studentTasks.length) {
-    localStudent.studentTasks.forEach((element) => {
+  if (studentTasks.length) {
+    studentTasks.forEach((element) => {
       showOnHTML(element);
     });
   } else {

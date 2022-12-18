@@ -1,4 +1,5 @@
 import { Student } from "../Student.mjs";
+import { TasksManager } from "../TaskManager.mjs";
 //show the tasks to an index HTML page
 export function showOnHTML(task) {
   const main = document.querySelector("main");
@@ -71,9 +72,12 @@ export function showOnHTML(task) {
   //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
-    const localStudent = new Student();
-    localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    localStudent.replaceTask(task, task.taskId);
+    // const localStudent = new Student();
+    // localStudent.studentTasks = localStudent.loadFromLocalStorage();
+    // localStudent.replaceTask(task, task.taskId);
+    const MT = new TasksManager();
+    studentTasks = MT.getAllTasks();
+    MT.replaceStudentTask(task, task.taskId);
   });
 
   butnSolution.appendChild(btntxt);
@@ -95,9 +99,13 @@ export function showOnHTML(task) {
   //
   butnManage.addEventListener("click", () => {
     task.flagCheck = true;
-    const localStudent = new Student();
-    localStudent.studentTasks = localStudent.loadFromLocalStorage();
-    localStudent.replaceTask(task, task.taskId);
+    // const localStudent = new Student();
+    // localStudent.studentTasks = localStudent.loadFromLocalStorage();
+    // localStudent.replaceTask(task, task.taskId);
+    //
+    const MT = new TasksManager();
+    studentTasks = MT.getAllTasks();
+    MT.replaceStudentTask(task, task.taskId);
   });
 
   butnManage.appendChild(btnManagetxt);

@@ -7,26 +7,30 @@ import { saveToLocalStorage } from "./saveToLocalStorage.mjs";
 import { showTaskDetails } from "./showTaskDetails.mjs";
 import { Student } from "../Student.mjs";
 import { checkDate } from "./checkDate.mjs";
+import { TasksManager } from "../TaskManager.mjs";
 
 function showOnTaskSolution() {
-  let localStudent = new Student();
-  localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  // let localStudent = new Student();
+  // localStudent.studentTasks = localStudent.loadFromLocalStorage();
+  const MT = new TasksManager();
+  let studentTasks = MT.getAllTasks();
   let marker = -1;
 
-  localStudent.studentTasks.forEach((task, index) => {
+  // localStudent.studentTasks.forEach((task, index) => {
+  studentTasks.forEach((task, index) => {
     if (task.flagSolution) {
       showTaskDetails(task);
       marker = index;
       if (
-        localStudent.studentTasks[marker].flagCheckComplete ||
-        !checkDate(localStudent.studentTasks[marker].taskDeadlineTime)
+        studentTasks[marker].flagCheckComplete ||
+        !checkDate(studentTasks[marker].taskDeadlineTime)
       ) {
         taskSolution.disabled = true;
       }
 
       task.flagSolution = false;
     }
-    localStudent.replaceTask(task, task.taskId);
+    MT.replaceStudentTask(task, task.taskId);
   });
   const linkToIndex = document.getElementById("linkToIndex");
   const submitSolutionBtn = document.getElementById("submitSolution");
@@ -39,11 +43,11 @@ function showOnTaskSolution() {
   } else {
     submitSolutionBtn.addEventListener("click", () => {
       const taskSolution = document.getElementById("taskSolution");
-      localStudent.studentTasks[marker].taskTextSolution = "";
+      studentTasks[marker].taskTextSolution = "";
       if (taskSolution.value.length >= 5) {
-        localStudent.studentTasks[marker].taskTextSolution = taskSolution.value;
-        localStudent.studentTasks[marker].flagComplete = true;
-        localStudent.replaceTask(localStudent.studentTasks[marker], marker);
+        studentTasks[marker].taskTextSolution = taskSolution.value;
+        studentTasks[marker].flagComplete = true;
+        MT.replaceStudentTask(studentTasks[marker], marker);
         linkToIndex.setAttribute("href", "/index.html");
       } else {
         alert("enter solution text, at least 5 characters");
