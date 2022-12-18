@@ -26,7 +26,6 @@ function showOnTaskSolution() {
   const submitSolutionBtn = document.getElementById("submitSolution");
 
   if (taskSolution.disabled || marker == -1) {
-    //
     const txt = document.getElementById("noButton");
     const txtNode = document.createTextNode(
       "Task all ready checked or time expired"

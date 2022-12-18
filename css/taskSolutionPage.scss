@@ -116,6 +116,11 @@ main {
       #submitSolution:hover {
         background-color: green;
       }
+      #noButton {
+        color: aliceblue;
+        font-family: $FontFamily;
+        font-size: ($FontSize)-8;
+      }
     }
   }
 }
