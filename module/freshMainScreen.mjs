@@ -9,8 +9,8 @@ export function freshMainScreen() {
   removeItems();
 
   if (studentTasks.length) {
-    studentTasks.forEach((task) => {
-      showOnHTML(task);
+    studentTasks.forEach((task, index) => {
+      showOnHTML(task, index);
     });
   } else {
     const main = document.querySelector("main");

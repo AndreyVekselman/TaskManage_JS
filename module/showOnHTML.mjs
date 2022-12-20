@@ -1,6 +1,6 @@
 import { TasksManager } from "../TaskManager.mjs";
 //show the tasks to an index HTML page
-export function showOnHTML(task) {
+export function showOnHTML(task, index) {
   const main = document.querySelector("main");
   const mainDiv = document.createElement("div");
   mainDiv.setAttribute("class", "mainDiv");
@@ -69,7 +69,7 @@ export function showOnHTML(task) {
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
     const MT = new TasksManager();
-    MT.replaceStudentTask(task, task.taskId);
+    MT.replaceStudentTask(task, index);
   });
 
   butnSolution.appendChild(btntxt);
@@ -90,7 +90,7 @@ export function showOnHTML(task) {
   butnManage.addEventListener("click", () => {
     task.flagCheck = true;
     const MT = new TasksManager();
-    MT.replaceStudentTask(task, task.taskId);
+    MT.replaceStudentTask(task, index);
   });
 
   butnManage.appendChild(btnManagetxt);
