@@ -6,5 +6,5 @@ export function checkDate(date) {
     Number(getDate.getMonth() + 1) +
     "-" +
     getDate.getDate();
-  return date > getDateStr;
+  return date >= getDateStr;
 }
