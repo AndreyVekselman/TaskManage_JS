@@ -7,11 +7,11 @@ export function taskSolutionPage() {
   const title = document.createElement("div");
   title.setAttribute("class", "title");
 
-  const subjTxt = document.createComment("p");
+  const subjTxt = document.createElement("p");
   subjTxt.setAttribute("class", "p");
   subjTxt.setAttribute("id", "subjTxt");
 
-  const details = document.createComment("p");
+  const details = document.createElement("p");
   details.setAttribute("id", "details");
   txtNode = document.createTextNode("Task details:");
   details.appendChild(txtNode);

@@ -1,4 +1,5 @@
 export function header() {
+  document.body.innerHTML = "";
   let txtNode = "";
 
   const header = document.createElement("header");

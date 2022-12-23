@@ -10,6 +10,8 @@ import { header } from "./module/header.mjs";
 import { main } from "./module/main.mjs";
 import { footer } from "./module/footer.mjs";
 import { taskSolutionPage } from "./module/taskSolutionPage.mjs";
+import { removeItems } from "./module/removeItems.mjs";
+import { showOnTaskSolution } from "./module/showOnTaskSolution.mjs";
 
 let templates = {
   home: function () {
@@ -19,10 +21,12 @@ let templates = {
     freshMainScreen();
   },
   solutionPage: function () {
+    removeItems();
     header();
     main();
     footer();
     taskSolutionPage();
+    showOnTaskSolution();
   },
   checkDeletePage: function () {
     header();
@@ -36,7 +40,10 @@ let templates = {
 let routes = {
   "/": "home",
   "/about": "about",
+  "html/about": "about",
+
   "/taskSolutionPage": "solutionPage",
+  "html/taskSolutionPage": "solutionPage",
   "/taskCheckDelete": "checkDeletePage",
 };
 function resolveRoute(routeURL) {
@@ -49,6 +56,7 @@ function resolveRoute(routeURL) {
 function router() {
   let url = window.location.hash.slice(1) || "/";
   let route = resolveRoute(url);
+  console.log(url);
   if (route) {
     templates[route]();
     console.log(route);
