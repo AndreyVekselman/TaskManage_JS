@@ -6,11 +6,10 @@
 // console.log(routes);
 
 import { freshMainScreen } from "./module/freshMainScreen.mjs";
+import { header } from "./module/header.mjs";
 
 let templates = {
-  home: function () {
-    console.log("hi");
-  },
+  home: header(),
 
   // freshMainScreen(),
   about: function () {
