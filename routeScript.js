@@ -9,6 +9,7 @@ import { freshMainScreen } from "./module/freshMainScreen.mjs";
 import { header } from "./module/header.mjs";
 import { main } from "./module/main.mjs";
 import { footer } from "./module/footer.mjs";
+import { taskSolutionPage } from "./module/taskSolutionPage.mjs";
 
 let templates = {
   home: function () {
@@ -21,6 +22,7 @@ let templates = {
     header();
     main();
     footer();
+    taskSolutionPage();
   },
   checkDeletePage: function () {
     header();
