@@ -8,7 +8,11 @@
 import { freshMainScreen } from "./module/freshMainScreen.mjs";
 
 let templates = {
-  home: freshMainScreen(),
+  home: function () {
+    console.log("hi");
+  },
+
+  // freshMainScreen(),
   about: function () {
     console.log("bye");
   },
@@ -36,6 +40,6 @@ function router() {
 }
 window.addEventListener("load", router);
 window.addEventListener("hashchange", router);
-window.addEventListener("storage", function (e) {
-  freshMainScreen();
-});
+// window.addEventListener("storage", function (e) {
+//   freshMainScreen();
+// });
