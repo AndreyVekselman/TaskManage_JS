@@ -7,9 +7,16 @@
 
 import { freshMainScreen } from "./module/freshMainScreen.mjs";
 import { header } from "./module/header.mjs";
+import { main } from "./module/main.mjs";
+import { footer } from "./module/footer.mjs";
 
 let templates = {
-  home: header(),
+  home: function () {
+    header();
+    main();
+    footer();
+    freshMainScreen();
+  },
 
   // freshMainScreen(),
   about: function () {
