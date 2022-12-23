@@ -1,4 +1,6 @@
 export function header() {
+  let txtNode = "";
+
   const header = document.createElement("header");
   header.setAttribute("class", "Header");
   header.setAttribute("id", "refresh");
@@ -6,7 +8,8 @@ export function header() {
 
   const headerSubject = document.createElement("div");
   const headerSubjectH2 = document.createElement("h2");
-  headerSubjectH2.innerText = "Student Tasks";
+  txtNode = document.createTextNode("Student Tasks");
+  headerSubjectH2.appendChild(txtNode);
   headerSubject.appendChild(headerSubjectH2);
   header.appendChild(headerSubject);
 
@@ -16,7 +19,8 @@ export function header() {
   linkA.setAttribute("href", "/html/createTask.html");
   const linkBtn = document.createElement("button");
   linkBtn.setAttribute("id", "addTaskBtn");
-  linkBtn.innerText = "Add New Task";
+  txtNode = document.createTextNode("Add New Task");
+  linkBtn.appendChild(txtNode);
   linkA.appendChild(linkBtn);
   headerLink.appendChild(linkA);
   header.appendChild(headerLink);
