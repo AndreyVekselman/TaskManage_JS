@@ -1,5 +1,9 @@
 // import classes and functions
-import { Task } from "./Task.mjs";
+import { freshMainScreen } from "./module/freshMainScreen.mjs";
 
-let Task1 = new Task("create a class", "create 1-st class and use module");
-Task1.showTask();
+//add or remove tasks on screen when it was added
+window.addEventListener("storage", function (e) {
+  freshMainScreen();
+});
+
+freshMainScreen();

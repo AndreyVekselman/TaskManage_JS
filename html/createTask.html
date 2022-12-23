@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskManager_Create Task</title>
+    <script type="module" defer src="/module/createNewTask.mjs"></script>
+    <link rel="stylesheet" href="/css/createTask.css" />
+  </head>
+  <body>
+    <header class="Header">Create a Student Tasks</header>
+    <div class="main">
+      <div class="form">
+        <form action="">
+          <label for="taskSubject">Add Task Subject:</label><br />
+          <input
+            type="text"
+            id="taskSubject"
+            placeholder="Task Subject"
+            minlength="5"
+          />
+          <br />
+          <label for="taskText">Add Task Text:</label><br />
+          <textarea
+            name="taskText"
+            id="taskText"
+            placeholder="Task Text"
+          ></textarea
+          ><br />
+          <label for="taskDate">Add Deadline for submission:</label><br />
+          <input
+            type="date"
+            id="taskDate"
+            placeholder="Deadline for submission"
+          />
+          <br />
+
+          <div>
+            <button type="submit" class="Btn_OK" id="Btn_OK">
+              Create a New Task
+            </button>
+          </div>
+        </form>
+        <div>
+          <a href="../index.html">
+            <button class="Btn_OK" id="returnButton">Back to Tasks</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">@ Powered by Andrey V. 2022</footer>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+$FontSize: 25px;
+$FontFamily: "Courier New", Courier, monospace;
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+Header {
+  background-color: gray;
+  color: aliceblue;
+  font-family: $FontFamily;
+  font-size: ($FontSize)-5px;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  line-height: 100px;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(20, 20, 20);
+  font-family: $FontFamily;
+  flex: 1;
+  .capsule1 {
+    background: rgb(216, 208, 208);
+    width: 45%;
+    border: 4px solid rgb(18, 220, 24);
+    padding: 10px;
+    height: 500px;
+    margin: auto;
+    .title {
+      height: 50px;
+      font-size: ($FontSize)-3;
+      font-family: $FontFamily;
+      font-style: normal;
+      font-weight: bold;
+      margin-bottom: 30px;
+      p {
+        text-align: center;
+      }
+    }
+    #txtArea {
+      resize: none;
+      padding-left: 20px;
+      font-size: $FontSize;
+      margin: 10px 0;
+      width: 100%;
+      height: 300px;
+      border-style: none;
+      box-sizing: border-box;
+    }
+    .btn {
+      align-items: center;
+      text-align: center;
+      #linkToIndex1 {
+        height: 40px;
+        font-size: ($FontSize)-5;
+        // background-color: red;
+      }
+    }
+  }
+  .capsule2 {
+    background: rgb(216, 208, 208);
+    width: 45%;
+    border: 4px solid red;
+    padding: 10px;
+    height: 500px;
+    margin: auto;
+    .title {
+      height: 50px;
+      font-size: ($FontSize)-3;
+      font-family: $FontFamily;
+      font-style: normal;
+      font-weight: bold;
+      margin-bottom: 30px;
+      p {
+        text-align: center;
+      }
+    }
+    label {
+      font-size: $FontSize;
+    }
+    #taskSolution {
+      resize: none;
+      padding-left: 20px;
+      font-size: $FontSize;
+      margin: 10px 0;
+      width: 100%;
+      height: 130px;
+      border-style: none;
+      box-sizing: border-box;
+    }
+    #taskNotes {
+      resize: none;
+      padding-left: 20px;
+      font-size: $FontSize;
+      margin: 10px 0;
+      width: 100%;
+      height: 130px;
+      border-style: none;
+      box-sizing: border-box;
+    }
+    .btn {
+      align-items: center;
+      text-align: center;
+      #submitSolution {
+        height: 40px;
+        font-size: ($FontSize)-5;
+        // background-color: red;
+      }
+      #submitSolution:hover {
+        background-color: green;
+      }
+      #noButton {
+        color: aliceblue;
+        font-family: $FontFamily;
+        font-size: ($FontSize)-8;
+      }
+    }
+  }
+}
+footer {
+  background-color: black;
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
+  font-size: larger;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  padding: 20px;
+}
+// .Text,
+// .status {
+//   background-color: aqua;
+// }
+// .red {
+//   background: red;
+// }
+// .green {
+//   background: green;
+// }

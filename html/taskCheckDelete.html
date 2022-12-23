@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Tasks Solution</title>
+    <link rel="stylesheet" href="/css/taskCheckDelPage.css" />
+    <script
+      defer
+      type="module"
+      src="/module/showOnTaskCheckDelete.mjs"
+    ></script>
+  </head>
+  <body>
+    <header class="Header" id="refresh">
+      <div><h2>Teacher Tasks Management</h2></div>
+    </header>
+    <main>
+      <div class="subMain">
+        <div class="capsule1">
+          <div class="title">
+            <p id="subjTxt" class="p"></p>
+            <p id="details">Task details:</p>
+          </div>
+          <div class="text" id="text"></div>
+          <div class="btn" id="linkindex1">
+            <a id="linkIndex1" href="../index.html">
+              <button id="linkToIndex1">Back to Tasks Page</button>
+            </a>
+          </div>
+        </div>
+        <div class="capsule2">
+          <div class="title"><p>Submission details:</p></div>
+          <label for="taskSolution">Task solution:</label><br />
+          <textarea
+            disabled
+            name="solution"
+            id="taskSolution"
+            placeholder="Text solution"
+          ></textarea>
+          <label for="taskNotes">Enter notes:</label><br />
+          <textarea
+            name="taskNotes"
+            id="taskNotes"
+            placeholder="Your notes"
+          ></textarea>
+          <div class="grade">
+            <div>
+              <label for="gradeScore">Please enter a score:</label>
+              <input type="number" name="gradeScore" id="gradeScore" />
+            </div>
+            <div class="btn" id="btnSubmit">
+              <a id="linkToIndex">
+                <button id="submitScore">Submit Score</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="capsule3">
+          <div class="delButton" id="delButton"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">@ Powered by Andrey V. 2022</footer>
+  </body>
+</html>
