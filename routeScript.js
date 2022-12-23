@@ -5,10 +5,10 @@
 // route("/", "home");
 // console.log(routes);
 
+import { freshMainScreen } from "./module/freshMainScreen.mjs";
+
 let templates = {
-  home: function () {
-    console.log("hi");
-  },
+  home: freshMainScreen(),
   about: function () {
     console.log("bye");
   },
@@ -23,12 +23,12 @@ function resolveRoute(routeURL) {
   } catch (e) {
     return false;
   }
-} //What the function gets, what it puts to the url variable.//sessionStorage.com#/about/ == '/about'//sessionStorage.com#/ == '/'
+}
 function router() {
-  let url = window.location.hash.slice(1) || "/"; // '#/about'.slice(1) == '/about'
-  let route = resolveRoute(url); //if route exists in routes object
+  let url = window.location.hash.slice(1) || "/";
+  let route = resolveRoute(url);
   if (route) {
-    templates[route](); //templates['about']();
+    templates[route]();
     console.log(route);
   } else {
     console.log("Route " + url + " not found");
@@ -36,3 +36,6 @@ function router() {
 }
 window.addEventListener("load", router);
 window.addEventListener("hashchange", router);
+window.addEventListener("storage", function (e) {
+  freshMainScreen();
+});
