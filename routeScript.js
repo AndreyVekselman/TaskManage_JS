@@ -17,8 +17,16 @@ let templates = {
     footer();
     freshMainScreen();
   },
-
-  // freshMainScreen(),
+  solutionPage: function () {
+    header();
+    main();
+    footer();
+  },
+  checkDeletePage: function () {
+    header();
+    main();
+    footer();
+  },
   about: function () {
     console.log("bye");
   },
@@ -26,6 +34,8 @@ let templates = {
 let routes = {
   "/": "home",
   "/about": "about",
+  "/taskSolutionPage": "solutionPage",
+  "/taskCheckDelete": "checkDeletePage",
 };
 function resolveRoute(routeURL) {
   try {
