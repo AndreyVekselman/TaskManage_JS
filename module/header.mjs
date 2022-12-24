@@ -22,6 +22,7 @@ export function header() {
   linkBtn.setAttribute("id", "addTaskBtn");
   txtNode = document.createTextNode("Add New Task");
   linkBtn.appendChild(txtNode);
+  
   linkA.appendChild(linkBtn);
   headerLink.appendChild(linkA);
   header.appendChild(headerLink);
