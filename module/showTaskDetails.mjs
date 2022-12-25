@@ -3,7 +3,8 @@ export function showTaskDetails(task) {
   const subjText = document.getElementById("subjTxt");
   text = "Task  Subject: " + task.taskSubject;
   const txtNode = document.createTextNode(text);
-  subjText.appendChild(txtNode);
+  // subjText.appendChild(txtNode);
+
   const txtDiv = document.getElementById("text");
   const txtArea = document.createElement("textarea");
   txtArea.setAttribute("id", "txtArea");

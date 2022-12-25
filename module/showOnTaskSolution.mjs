@@ -2,7 +2,7 @@ import { showTaskDetails } from "./showTaskDetails.mjs";
 import { checkDate } from "./checkDate.mjs";
 import { TasksManager } from "../TaskManager.mjs";
 
-function showOnTaskSolution() {
+export function showOnTaskSolution() {
   const MT = new TasksManager();
   const studentTasks = MT.getAllTasks();
   let marker = -1;
