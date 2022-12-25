@@ -64,8 +64,13 @@ function router() {
     console.log("Route " + url + " not found");
   }
 }
-window.addEventListener("load", router);
-window.addEventListener("hashchange", router);
+window.addEventListener("load", function (e) {
+  router();
+});
+window.addEventListener("hashchange", function (e) {
+  router();
+});
+
 // window.addEventListener("storage", function (e) {
 //   freshMainScreen();
 // });
