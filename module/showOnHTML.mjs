@@ -64,10 +64,9 @@ export function showOnHTML(task, index) {
   butnSolution.setAttribute("id", "butnSolution");
   const btntxt = document.createTextNode("To Task Details");
   const link = document.createElement("a");
-  // link.setAttribute("href", "../html/taskSolutionPage.html");
+  link.setAttribute("href", "../html/taskSolutionPage.html");
 
   //
-  link.setAttribute("href", "#/taskSolutionPage");
   //
   butnSolution.addEventListener("click", () => {
     task.flagSolution = true;
