@@ -76,7 +76,6 @@ main .capsule2 .title {
   font-family: "Courier New", Courier, monospace;
   font-style: normal;
   font-weight: bold;
-  margin-bottom: 30px;
 }
 main .capsule2 .title p {
   text-align: center;
@@ -116,7 +115,7 @@ main .capsule2 .btn #submitSolution:hover {
   background-color: green;
 }
 main .capsule2 .btn #noButton {
-  color: aliceblue;
+  color: red;
   font-family: "Courier New", Courier, monospace;
   font-size: 17px;
 }
