@@ -117,7 +117,8 @@ main .capsule2 .btn #submitSolution:hover {
 main .capsule2 .btn #noButton {
   color: red;
   font-family: "Courier New", Courier, monospace;
-  font-size: 17px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 footer {
